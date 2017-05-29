@@ -1,0 +1,20 @@
+postup
+======
+* základní návrh
+* backend: 
+    - navrhnout, jak bude konkrétně fungovat (včetně využítí gitu)
+    - vyzkoušet postup ručně, vytvořit ukázkový skript 
+* frontend: 
+    - vyzkoušet si vytvoření jednoduché webové aplikace v pythonu s využitím CGI
+    - (nejdřív prototyp?) navrhnout a naimplementovat základní uživatelské rozhraní, propojit s backendem
+    - přidat ajax 
+* po vytvoření základní verze umožnit aplikaci vyzkoušet a dál ji rozšiřovat a předělávat
+
+zásady
+======
+* MVC
+* TDD
+
+odkazy
+======
+http://webpython.codepoint.net/cgi_session_class

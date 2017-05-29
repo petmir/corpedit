@@ -1,0 +1,2805 @@
+DEBUG:root:
+  File "model_test.py", line 73, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 319, in get_viewport_content
+    dbg(changelog_from_head_to_my_base)
+#[]#
+
+DEBUG:root:
+  File "model_test.py", line 73, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 320, in get_viewport_content
+    dbg(self._file_changelog)
+#[]#
+
+DEBUG:root:
+  File "model_test.py", line 73, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (67, 72), src (67, 72)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f57464a9f80>]#
+
+DEBUG:root:
+  File "model_test.py", line 73, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (67, 72) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f57464a9f80>]#
+
+DEBUG:root:
+  File "model_test.py", line 73, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:67,n:5 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f57464a9e60>]#
+
+DEBUG:root:
+  File "model_test.py", line 73, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (67, 72), src (67, 72)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f57464a9e60>]#
+
+DEBUG:root:
+  File "model_test.py", line 73, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (67, 72) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f57464a9e60>]#
+
+DEBUG:root:
+  File "model_test.py", line 73, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:67,n:5 of IO <_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 73, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 73, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (67, 72), src (67, 72)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f57464a9e60>
+ -> block_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+
+ -> segment_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+
+ -> segment_orig_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+]#
+
+DEBUG:root:
+  File "model_test.py", line 73, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (67, 72), src (67, 72)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f57464a9f80>
+ -> block_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+
+ -> segment_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+
+ -> segment_orig_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+]#
+
+DEBUG:root:
+  File "model_test.py", line 73, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 296, in total_changelog
+    dbg("changelog_from_head:", changelog_from_head)
+#[changelog_from_head:]#
+
+DEBUG:root:
+  File "model_test.py", line 73, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 297, in total_changelog
+    dbg("self._file_changelog:", self._file_changelog)
+#[self._file_changelog:]#
+
+DEBUG:root:
+  File "model_test.py", line 73, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 298, in total_changelog
+    dbg("total_changelog:", changelog)
+#[total_changelog:]#
+
+DEBUG:root:
+  File "model_test.py", line 82, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (67, 72), src (67, 72)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f574645af38>]#
+
+DEBUG:root:
+  File "model_test.py", line 82, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (67, 72) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f574645af38>]#
+
+DEBUG:root:
+  File "model_test.py", line 82, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:67,n:5 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f57464a9f38>]#
+
+DEBUG:root:
+  File "model_test.py", line 82, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (67, 72), src (67, 72)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f57464a9f38>]#
+
+DEBUG:root:
+  File "model_test.py", line 82, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (67, 72) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f57464a9f38>]#
+
+DEBUG:root:
+  File "model_test.py", line 82, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:67,n:5 of IO <_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 82, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 82, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (67, 72), src (67, 72)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f57464a9f38>
+ -> block_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+
+ -> segment_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+
+ -> segment_orig_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+]#
+
+DEBUG:root:
+  File "model_test.py", line 82, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (67, 72), src (67, 72)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f574645af38>
+ -> block_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+
+ -> segment_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+
+ -> segment_orig_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+]#
+
+DEBUG:root:
+  File "model_test.py", line 90, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 319, in get_viewport_content
+    dbg(changelog_from_head_to_my_base)
+#[]#
+
+DEBUG:root:
+  File "model_test.py", line 90, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 320, in get_viewport_content
+    dbg(self._file_changelog)
+#[@@ -68,2 +68,1 @@
+-si	se	k3c3xPyFqP	
+-premiéru	premiér	k1gMnSc3qP	premiér
++si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
+]#
+
+DEBUG:root:
+  File "model_test.py", line 90, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (67, 72), src (67, 73)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f574640fbd8>]#
+
+DEBUG:root:
+  File "model_test.py", line 90, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (67, 73) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f574640fbd8>]#
+
+DEBUG:root:
+  File "model_test.py", line 90, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:67,n:6 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f57464a9ea8>]#
+
+DEBUG:root:
+  File "model_test.py", line 90, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (67, 73), src (67, 73)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f57464a9ea8>]#
+
+DEBUG:root:
+  File "model_test.py", line 90, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (67, 73) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f57464a9ea8>]#
+
+DEBUG:root:
+  File "model_test.py", line 90, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:67,n:6 of IO <_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 90, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 90, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (67, 73), src (67, 73)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f57464a9ea8>
+ -> block_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+nenechal	nechat	k5eNaPmAgInSrDaPqP	
+
+ -> segment_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+nenechal	nechat	k5eNaPmAgInSrDaPqP	
+
+ -> segment_orig_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+nenechal	nechat	k5eNaPmAgInSrDaPqP	
+]#
+
+DEBUG:root:
+  File "model_test.py", line 90, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (67, 72), src (67, 73)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f574640fbd8>
+ -> block_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+nenechal	nechat	k5eNaPmAgInSrDaPqP	
+
+ -> segment_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+nenechal	nechat	k5eNaPmAgInSrDaPqP	
+
+ -> segment_orig_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+nenechal	nechat	k5eNaPmAgInSrDaPqP	
+]#
+
+DEBUG:root:
+  File "model_test.py", line 90, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 296, in total_changelog
+    dbg("changelog_from_head:", changelog_from_head)
+#[changelog_from_head:]#
+
+DEBUG:root:
+  File "model_test.py", line 90, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 297, in total_changelog
+    dbg("self._file_changelog:", self._file_changelog)
+#[self._file_changelog:@@ -68,2 +68,1 @@
+-si	se	k3c3xPyFqP	
+-premiéru	premiér	k1gMnSc3qP	premiér
++si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
+]#
+
+DEBUG:root:
+  File "model_test.py", line 90, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 298, in total_changelog
+    dbg("total_changelog:", changelog)
+#[total_changelog:@@ -68,2 +68,1 @@
+-si	se	k3c3xPyFqP	
+-premiéru	premiér	k1gMnSc3qP	premiér
++si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
+]#
+
+DEBUG:root:
+  File "model_test.py", line 102, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (67, 72), src (67, 73)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f574640fbd8>]#
+
+DEBUG:root:
+  File "model_test.py", line 102, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (67, 73) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f574640fbd8>]#
+
+DEBUG:root:
+  File "model_test.py", line 102, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:67,n:6 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f574640fd40>]#
+
+DEBUG:root:
+  File "model_test.py", line 102, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (67, 73), src (67, 73)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f574640fd40>]#
+
+DEBUG:root:
+  File "model_test.py", line 102, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (67, 73) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f574640fd40>]#
+
+DEBUG:root:
+  File "model_test.py", line 102, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:67,n:6 of IO <_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 102, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 102, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (67, 73), src (67, 73)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f574640fd40>
+ -> block_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+nenechal	nechat	k5eNaPmAgInSrDaPqP	
+
+ -> segment_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+nenechal	nechat	k5eNaPmAgInSrDaPqP	
+
+ -> segment_orig_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+nenechal	nechat	k5eNaPmAgInSrDaPqP	
+]#
+
+DEBUG:root:
+  File "model_test.py", line 102, in test_do_some_edits
+    model.Application().save_viewport_content(w1_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (67, 72), src (67, 73)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f574640fbd8>
+ -> block_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+nenechal	nechat	k5eNaPmAgInSrDaPqP	
+
+ -> segment_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+nenechal	nechat	k5eNaPmAgInSrDaPqP	
+
+ -> segment_orig_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+nenechal	nechat	k5eNaPmAgInSrDaPqP	
+]#
+
+DEBUG:root:
+  File "model_test.py", line 110, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 319, in get_viewport_content
+    dbg(changelog_from_head_to_my_base)
+#[]#
+
+DEBUG:root:
+  File "model_test.py", line 110, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 320, in get_viewport_content
+    dbg(self._file_changelog)
+#[@@ -68,2 +68,3 @@
+-si	se	k3c3xPyFqP	
+-premiéru	premiér	k1gMnSc3qP	premiér
++si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
++ADDED LINE 1
++ADDED LINE 2
+]#
+
+DEBUG:root:
+  File "model_test.py", line 110, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (67, 72), src (67, 71)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f574640fa70>]#
+
+DEBUG:root:
+  File "model_test.py", line 110, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (67, 71) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f574640fa70>]#
+
+DEBUG:root:
+  File "model_test.py", line 110, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:67,n:4 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f574640fef0>]#
+
+DEBUG:root:
+  File "model_test.py", line 110, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (67, 71), src (67, 71)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f574640fef0>]#
+
+DEBUG:root:
+  File "model_test.py", line 110, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (67, 71) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f574640fef0>]#
+
+DEBUG:root:
+  File "model_test.py", line 110, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:67,n:4 of IO <_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 110, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 110, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (67, 71), src (67, 71)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f574640fef0>
+ -> block_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+
+ -> segment_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+
+ -> segment_orig_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+]#
+
+DEBUG:root:
+  File "model_test.py", line 110, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (67, 72), src (67, 71)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f574640fa70>
+ -> block_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
+ADDED LINE 1
+ADDED LINE 2
+nového	nový	k2eAgNnSc2d1qP	nové
+
+ -> segment_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
+ADDED LINE 1
+ADDED LINE 2
+nového	nový	k2eAgNnSc2d1qP	nové
+
+ -> segment_orig_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+]#
+
+DEBUG:root:
+  File "model_test.py", line 110, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 296, in total_changelog
+    dbg("changelog_from_head:", changelog_from_head)
+#[changelog_from_head:]#
+
+DEBUG:root:
+  File "model_test.py", line 110, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 297, in total_changelog
+    dbg("self._file_changelog:", self._file_changelog)
+#[self._file_changelog:@@ -68,2 +68,3 @@
+-si	se	k3c3xPyFqP	
+-premiéru	premiér	k1gMnSc3qP	premiér
++si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
++ADDED LINE 1
++ADDED LINE 2
+]#
+
+DEBUG:root:
+  File "model_test.py", line 110, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 298, in total_changelog
+    dbg("total_changelog:", changelog)
+#[total_changelog:@@ -68,2 +68,3 @@
+-si	se	k3c3xPyFqP	
+-premiéru	premiér	k1gMnSc3qP	premiér
++si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
++ADDED LINE 1
++ADDED LINE 2
+]#
+
+DEBUG:root:
+  File "model_test.py", line 172, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 319, in get_viewport_content
+    dbg(changelog_from_head_to_my_base)
+#[]#
+
+DEBUG:root:
+  File "model_test.py", line 172, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 320, in get_viewport_content
+    dbg(self._file_changelog)
+#[]#
+
+DEBUG:root:
+  File "model_test.py", line 172, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (56, 64), src (56, 64)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f5746418b90>]#
+
+DEBUG:root:
+  File "model_test.py", line 172, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (56, 64) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f5746418b90>]#
+
+DEBUG:root:
+  File "model_test.py", line 172, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:56,n:8 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f57464189e0>]#
+
+DEBUG:root:
+  File "model_test.py", line 172, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (56, 64), src (56, 64)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f57464189e0>]#
+
+DEBUG:root:
+  File "model_test.py", line 172, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (56, 64) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f57464189e0>]#
+
+DEBUG:root:
+  File "model_test.py", line 172, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:56,n:8 of IO <_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 172, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 172, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (56, 64), src (56, 64)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f57464189e0>
+ -> block_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+
+ -> segment_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+
+ -> segment_orig_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+]#
+
+DEBUG:root:
+  File "model_test.py", line 172, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (56, 64), src (56, 64)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f5746418b90>
+ -> block_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+
+ -> segment_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+
+ -> segment_orig_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+]#
+
+DEBUG:root:
+  File "model_test.py", line 172, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 296, in total_changelog
+    dbg("changelog_from_head:", changelog_from_head)
+#[changelog_from_head:]#
+
+DEBUG:root:
+  File "model_test.py", line 172, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 297, in total_changelog
+    dbg("self._file_changelog:", self._file_changelog)
+#[self._file_changelog:]#
+
+DEBUG:root:
+  File "model_test.py", line 172, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 298, in total_changelog
+    dbg("total_changelog:", changelog)
+#[total_changelog:]#
+
+DEBUG:root:
+  File "model_test.py", line 191, in test_do_some_edits
+    model.Application().save_viewport_content(w2_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (56, 64), src (56, 64)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f5746418998>]#
+
+DEBUG:root:
+  File "model_test.py", line 191, in test_do_some_edits
+    model.Application().save_viewport_content(w2_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (56, 64) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f5746418998>]#
+
+DEBUG:root:
+  File "model_test.py", line 191, in test_do_some_edits
+    model.Application().save_viewport_content(w2_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:56,n:8 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f5746418b90>]#
+
+DEBUG:root:
+  File "model_test.py", line 191, in test_do_some_edits
+    model.Application().save_viewport_content(w2_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (56, 64), src (56, 64)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f5746418b90>]#
+
+DEBUG:root:
+  File "model_test.py", line 191, in test_do_some_edits
+    model.Application().save_viewport_content(w2_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (56, 64) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f5746418b90>]#
+
+DEBUG:root:
+  File "model_test.py", line 191, in test_do_some_edits
+    model.Application().save_viewport_content(w2_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:56,n:8 of IO <_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 191, in test_do_some_edits
+    model.Application().save_viewport_content(w2_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 191, in test_do_some_edits
+    model.Application().save_viewport_content(w2_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (56, 64), src (56, 64)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f5746418b90>
+ -> block_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+
+ -> segment_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+
+ -> segment_orig_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+]#
+
+DEBUG:root:
+  File "model_test.py", line 191, in test_do_some_edits
+    model.Application().save_viewport_content(w2_id, new_content)
+  File "model.py", line 107, in save_viewport_content
+    window.save_viewport_content(new_content)
+  File "model.py", line 378, in save_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (56, 64), src (56, 64)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f5746418998>
+ -> block_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+
+ -> segment_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+
+ -> segment_orig_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+]#
+
+DEBUG:root:
+  File "model_test.py", line 194, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 319, in get_viewport_content
+    dbg(changelog_from_head_to_my_base)
+#[]#
+
+DEBUG:root:
+  File "model_test.py", line 194, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 320, in get_viewport_content
+    dbg(self._file_changelog)
+#[@@ -58,5 +58,2 @@
+-po	po	k7c6qP	
+-víkendu	víkend	k1gInSc6qP	víkend
+-určitě	určitě	k6eAd1	
+-nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+-Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
++(DELETED THESE 4 WORDS)
++SpytihněVVVVV	Spytihněv	k1gFnSc1qG	Spytihněv
+]#
+
+DEBUG:root:
+  File "model_test.py", line 194, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (56, 64), src (56, 67)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f5746418b00>]#
+
+DEBUG:root:
+  File "model_test.py", line 194, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (56, 67) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f5746418b00>]#
+
+DEBUG:root:
+  File "model_test.py", line 194, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:56,n:11 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f5746418c68>]#
+
+DEBUG:root:
+  File "model_test.py", line 194, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (56, 67), src (56, 67)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f5746418c68>]#
+
+DEBUG:root:
+  File "model_test.py", line 194, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (56, 67) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f5746418c68>]#
+
+DEBUG:root:
+  File "model_test.py", line 194, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:56,n:11 of IO <_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 194, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 194, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (56, 67), src (56, 67)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f5746418c68>
+ -> block_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+.	.	kIx.	
+</s>
+<s desamb="1">
+
+ -> segment_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+.	.	kIx.	
+</s>
+<s desamb="1">
+
+ -> segment_orig_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+.	.	kIx.	
+</s>
+<s desamb="1">
+]#
+
+DEBUG:root:
+  File "model_test.py", line 194, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (56, 64), src (56, 67)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f5746418b00>
+ -> block_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+(DELETED THESE 4 WORDS)
+SpytihněVVVVV	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+.	.	kIx.	
+</s>
+<s desamb="1">
+
+ -> segment_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+(DELETED THESE 4 WORDS)
+SpytihněVVVVV	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+.	.	kIx.	
+</s>
+<s desamb="1">
+
+ -> segment_orig_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+.	.	kIx.	
+</s>
+<s desamb="1">
+]#
+
+DEBUG:root:
+  File "model_test.py", line 194, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 296, in total_changelog
+    dbg("changelog_from_head:", changelog_from_head)
+#[changelog_from_head:]#
+
+DEBUG:root:
+  File "model_test.py", line 194, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 297, in total_changelog
+    dbg("self._file_changelog:", self._file_changelog)
+#[self._file_changelog:@@ -58,5 +58,2 @@
+-po	po	k7c6qP	
+-víkendu	víkend	k1gInSc6qP	víkend
+-určitě	určitě	k6eAd1	
+-nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+-Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
++(DELETED THESE 4 WORDS)
++SpytihněVVVVV	Spytihněv	k1gFnSc1qG	Spytihněv
+]#
+
+DEBUG:root:
+  File "model_test.py", line 194, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 298, in total_changelog
+    dbg("total_changelog:", changelog)
+#[total_changelog:@@ -58,5 +58,2 @@
+-po	po	k7c6qP	
+-víkendu	víkend	k1gInSc6qP	víkend
+-určitě	určitě	k6eAd1	
+-nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+-Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
++(DELETED THESE 4 WORDS)
++SpytihněVVVVV	Spytihněv	k1gFnSc1qG	Spytihněv
+]#
+
+DEBUG:root:
+  File "model_test.py", line 203, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 319, in get_viewport_content
+    dbg(changelog_from_head_to_my_base)
+#[]#
+
+DEBUG:root:
+  File "model_test.py", line 203, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 320, in get_viewport_content
+    dbg(self._file_changelog)
+#[@@ -68,2 +68,3 @@
+-si	se	k3c3xPyFqP	
+-premiéru	premiér	k1gMnSc3qP	premiér
++si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
++ADDED LINE 1
++ADDED LINE 2
+]#
+
+DEBUG:root:
+  File "model_test.py", line 203, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (67, 72), src (67, 71)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f5746418b90>]#
+
+DEBUG:root:
+  File "model_test.py", line 203, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (67, 71) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f5746418b90>]#
+
+DEBUG:root:
+  File "model_test.py", line 203, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:67,n:4 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f5746418b00>]#
+
+DEBUG:root:
+  File "model_test.py", line 203, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (67, 71), src (67, 71)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f5746418b00>]#
+
+DEBUG:root:
+  File "model_test.py", line 203, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (67, 71) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f5746418b00>]#
+
+DEBUG:root:
+  File "model_test.py", line 203, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:67,n:4 of IO <_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 203, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 203, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (67, 71), src (67, 71)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f5746418b00>
+ -> block_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+
+ -> segment_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+
+ -> segment_orig_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+]#
+
+DEBUG:root:
+  File "model_test.py", line 203, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (67, 72), src (67, 71)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f5746418b90>
+ -> block_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
+ADDED LINE 1
+ADDED LINE 2
+nového	nový	k2eAgNnSc2d1qP	nové
+
+ -> segment_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
+ADDED LINE 1
+ADDED LINE 2
+nového	nový	k2eAgNnSc2d1qP	nové
+
+ -> segment_orig_data: 
+Rožnov	Rožnov	k1gInSc1	Rožnov
+si	se	k3c3xPyFqP	
+premiéru	premiér	k1gMnSc3qP	premiér
+nového	nový	k2eAgNnSc2d1qP	nové
+]#
+
+DEBUG:root:
+  File "model_test.py", line 203, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 296, in total_changelog
+    dbg("changelog_from_head:", changelog_from_head)
+#[changelog_from_head:]#
+
+DEBUG:root:
+  File "model_test.py", line 203, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 297, in total_changelog
+    dbg("self._file_changelog:", self._file_changelog)
+#[self._file_changelog:@@ -68,2 +68,3 @@
+-si	se	k3c3xPyFqP	
+-premiéru	premiér	k1gMnSc3qP	premiér
++si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
++ADDED LINE 1
++ADDED LINE 2
+]#
+
+DEBUG:root:
+  File "model_test.py", line 203, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 298, in total_changelog
+    dbg("total_changelog:", changelog)
+#[total_changelog:@@ -68,2 +68,3 @@
+-si	se	k3c3xPyFqP	
+-premiéru	premiér	k1gMnSc3qP	premiér
++si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
++ADDED LINE 1
++ADDED LINE 2
+]#
+
+DEBUG:root:
+  File "model_test.py", line 214, in test_do_some_edits
+  File "model.py", line 112, in commit
+  File "model.py", line 409, in commit
+  File "model.py", line 519, in patch_and_commit_file
+  File "../common.py", line 59, in dbg
+#[--- 
++++ 
+@@ -58,5 +58,2 @@
+-po	po	k7c6qP	
+-víkendu	víkend	k1gInSc6qP	víkend
+-určitě	určitě	k6eAd1	
+-nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+-Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
++(DELETED THESE 4 WORDS)
++SpytihněVVVVV	Spytihněv	k1gFnSc1qG	Spytihněv
+]#
+
+DEBUG:root:
+  File "model_test.py", line 218, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 319, in get_viewport_content
+    dbg(changelog_from_head_to_my_base)
+#[@@ -58,2 +58,5 @@ kurs	kurs	k1gInSc1	kurs
+-(DELETED THESE 4 WORDS)
+-SpytihněVVVVV	Spytihněv	k1gFnSc1qG	Spytihněv
++po	po	k7c6qP	
++víkendu	víkend	k1gInSc6qP	víkend
++určitě	určitě	k6eAd1	
++nabere	nabrat	k5eAaPmIp3nSaPrDqP	
++Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+]#
+
+DEBUG:root:
+  File "model_test.py", line 218, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 320, in get_viewport_content
+    dbg(self._file_changelog)
+#[@@ -58,5 +58,2 @@
+-po	po	k7c6qP	
+-víkendu	víkend	k1gInSc6qP	víkend
+-určitě	určitě	k6eAd1	
+-nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+-Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
++(DELETED THESE 4 WORDS)
++SpytihněVVVVV	Spytihněv	k1gFnSc1qG	Spytihněv
+]#
+
+DEBUG:root:
+  File "model_test.py", line 218, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (56, 64), src (56, 67)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f574643d7a0>]#
+
+DEBUG:root:
+  File "model_test.py", line 218, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (56, 67) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f574643d7a0>]#
+
+DEBUG:root:
+  File "model_test.py", line 218, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:56,n:11 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f5746418e60>]#
+
+DEBUG:root:
+  File "model_test.py", line 218, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (56, 67), src (56, 64)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f5746418e60>]#
+
+DEBUG:root:
+  File "model_test.py", line 218, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (56, 64) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f5746418e60>]#
+
+DEBUG:root:
+  File "model_test.py", line 218, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:56,n:8 of IO <_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 218, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 218, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (56, 67), src (56, 64)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f5746418e60>
+ -> block_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+.	.	kIx.	
+</s>
+<s desamb="1">
+
+ -> segment_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+.	.	kIx.	
+</s>
+<s desamb="1">
+
+ -> segment_orig_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+(DELETED THESE 4 WORDS)
+SpytihněVVVVV	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+.	.	kIx.	
+</s>
+<s desamb="1">
+]#
+
+DEBUG:root:
+  File "model_test.py", line 218, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (56, 64), src (56, 67)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f574643d7a0>
+ -> block_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+(DELETED THESE 4 WORDS)
+SpytihněVVVVV	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+.	.	kIx.	
+</s>
+<s desamb="1">
+
+ -> segment_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+(DELETED THESE 4 WORDS)
+SpytihněVVVVV	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+.	.	kIx.	
+</s>
+<s desamb="1">
+
+ -> segment_orig_data: 
+Sestupný	sestupný	k2eAgInSc1d1qP	sestupný
+kurs	kurs	k1gInSc1	kurs
+po	po	k7c6qP	
+víkendu	víkend	k1gInSc6qP	víkend
+určitě	určitě	k6eAd1	
+nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+<g/>
+.	.	kIx.	
+</s>
+<s desamb="1">
+]#
+
+DEBUG:root:
+  File "model_test.py", line 218, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 296, in total_changelog
+    dbg("changelog_from_head:", changelog_from_head)
+#[changelog_from_head:@@ -58,2 +58,5 @@ kurs	kurs	k1gInSc1	kurs
+-(DELETED THESE 4 WORDS)
+-SpytihněVVVVV	Spytihněv	k1gFnSc1qG	Spytihněv
++po	po	k7c6qP	
++víkendu	víkend	k1gInSc6qP	víkend
++určitě	určitě	k6eAd1	
++nabere	nabrat	k5eAaPmIp3nSaPrDqP	
++Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+]#
+
+DEBUG:root:
+  File "model_test.py", line 218, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 297, in total_changelog
+    dbg("self._file_changelog:", self._file_changelog)
+#[self._file_changelog:@@ -58,5 +58,2 @@
+-po	po	k7c6qP	
+-víkendu	víkend	k1gInSc6qP	víkend
+-určitě	určitě	k6eAd1	
+-nabere	nabrat	k5eAaPmIp3nSaPrDqP	
+-Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
++(DELETED THESE 4 WORDS)
++SpytihněVVVVV	Spytihněv	k1gFnSc1qG	Spytihněv
+]#
+
+DEBUG:root:
+  File "model_test.py", line 218, in test_do_some_edits
+    model.Application().window_page(w2_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 284, in page_data
+    'total_changelog': self.total_changelog(),
+  File "model.py", line 298, in total_changelog
+    dbg("total_changelog:", changelog)
+#[total_changelog:@@ -58,2 +58,2 @@
+-(DELETED THESE 4 WORDS)
+-SpytihněVVVVV	Spytihněv	k1gFnSc1qG	Spytihněv
++(DELETED THESE 4 WORDS)
++SpytihněVVVVV	Spytihněv	k1gFnSc1qG	Spytihněv
+]#
+
+DEBUG:root:
+  File "model_test.py", line 223, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 319, in get_viewport_content
+    dbg(changelog_from_head_to_my_base)
+#[@@ -58,2 +58,5 @@ kurs	kurs	k1gInSc1	kurs
+-(DELETED THESE 4 WORDS)
+-SpytihněVVVVV	Spytihněv	k1gFnSc1qG	Spytihněv
++po	po	k7c6qP	
++víkendu	víkend	k1gInSc6qP	víkend
++určitě	určitě	k6eAd1	
++nabere	nabrat	k5eAaPmIp3nSaPrDqP	
++Spytihněv	Spytihněv	k1gFnSc1qG	Spytihněv
+]#
+
+DEBUG:root:
+  File "model_test.py", line 223, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 320, in get_viewport_content
+    dbg(self._file_changelog)
+#[@@ -68,2 +68,3 @@
+-si	se	k3c3xPyFqP	
+-premiéru	premiér	k1gMnSc3qP	premiér
++si	se	k3c3xPyFqP	[NOTE: DELETED THE NEXT LINE (THE LEMMA THERE LOOKED WRONG)]
++ADDED LINE 1
++ADDED LINE 2
+]#
+
+DEBUG:root:
+  File "model_test.py", line 223, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (67, 72), src (67, 71)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f574643d758>]#
+
+DEBUG:root:
+  File "model_test.py", line 223, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (67, 71) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7f574643d758>]#
+
+DEBUG:root:
+  File "model_test.py", line 223, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:67,n:4 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f574643d830>]#
+
+DEBUG:root:
+  File "model_test.py", line 223, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (67, 71), src (67, 71)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f574643d830>]#
+
+DEBUG:root:
+  File "model_test.py", line 223, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (67, 71) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f574643d830>]#
+
+DEBUG:root:
+  File "model_test.py", line 223, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:67,n:4 of IO <_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 223, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name=u'/home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "model_test.py", line 223, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (67, 71), src (67, 71)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7f574643d830>
+ -> block_data: 
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+nenechal	nechat	k5eNaPmAgInSrDaPqP	
+pokazit	pokazit	k5eAaPmFaPrDqP	
+
+ -> segment_data: 
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+nenechal	nechat	k5eNaPmAgInSrDaPqP	
+pokazit	pokazit	k5eAaPmFaPrDqP	
+
+ -> segment_orig_data: 
+nového	nový	k2eAgNnSc2d1qP	nové
+hřiště	hřiště	k1gNnSc2qP	hřiště
+nenechal	nechat	k5eNaPmAgInSrDaPqP	
+pokazit	pokazit	k5eAaPmFaPrDqP	
+]#
+

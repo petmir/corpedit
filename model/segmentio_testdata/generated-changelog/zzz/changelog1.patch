@@ -1,0 +1,12 @@
+--- file.txt
++++ file-after-edit.txt
+@@ -1,6 +1,6 @@
+-first
+-second
+-third
++1st
++2nd
++3rd
+ fourth
+ fifth
+ sixth

@@ -1,0 +1,55 @@
+/* style for the drag&drop-able horizontal view (made with jquery-sortable.js) */
+
+body.dragging, body.dragging * {
+    cursor: move !important;
+}
+
+.dragged {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 2000;
+}
+
+ol.serialization {
+    list-style-type: none;
+    display: block;
+    /*height: 50px;*/
+    padding: 20px;
+}
+ol.serialization li {
+    float: left;
+    /*border: 1px solid green;*/
+    margin-left: 4px;
+    margin-right: 4px;
+    cursor: pointer;
+}
+ol.serialization:after {
+    clear: both;
+}
+ol.serialization li.placeholder {
+    position: relative; 
+}
+ol.serialization li.placeholder:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: red;
+    top: -6px;
+    margin-left: -5px;
+    border-bottom: none; 
+}
+
+/* hover effect */
+ol.serialization li:hover {
+    background-color: #ADD8E6;
+}
+
+/* word classes */
+ol.serialization li.word-class-word {
+    color: #708;
+}
+ol.serialization li.word-class-tag {
+    color: #a50;
+}

@@ -1,0 +1,309 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+<head>
+    <title>[home] $title</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
+<style type="text/css">
+    body {
+        font-family: sans-serif;
+    }
+    a {
+        text-decoration: none;
+    }
+
+    h1 {
+        font-size: 150%;
+        padding-left: 35px;
+        background-image: url('view/octicons-5.0.1/lib/svg/home.svg');
+        background-repeat: no-repeat;
+        background-position: 10px center;
+    }
+    a#admin-link {
+        float: right;
+    }
+    form#change-user {
+        float: right;
+        margin-right: 3em;
+    }
+
+    h2 {
+        font-size: 120%;
+    }
+    h2.expanding-heading {
+        background-color: #E5E5E5;
+        padding: 0.2em;
+    }
+    h2.expanding-heading:hover {
+        cursor: pointer;
+        background-color: #ADD8E6;
+    }
+    #my_windows, #files_in_system, #open_form {
+        margin: 1.5em;
+    }
+
+    .form-filling-text {
+        border-bottom: 1px dotted blue;
+    }
+    .form-filling-text:hover {
+        color: blue;
+        cursor: pointer;
+    }
+
+    ul.input-choice {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+    }
+    ul.input-choice li {
+        background-color: #E5E5E5;  
+        margin-bottom: 0.5em;
+    }
+    ul.input-choice li .radio-input {
+        display: none;
+    }
+    ul.input-choice li label {
+        background-color: #E5E5E5;  
+        display: block;
+        padding: 10px;
+    }
+    ul.input-choice li label#label_corpus {
+        padding: 10px 10px 10px 30px;
+        background-image: url('view/octicons-5.0.1/lib/svg/package.svg');
+        background-repeat: no-repeat;
+        background-position: 8px center;
+    }
+    ul.input-choice li label#label_file {
+        padding: 10px 10px 10px 30px;
+        background-image: url('view/octicons-5.0.1/lib/svg/file.svg');
+        background-repeat: no-repeat;
+        background-position: 10px center;
+    }
+    ul.input-choice li label:hover {
+        cursor: pointer;
+    }
+    ul.input-choice li .text-input {
+        width: 90%;
+        padding: 10px;
+        margin: 20px;
+    }
+
+    table {
+        border: 1px solid #E5E5E5; 
+    }
+    table#my_windows tr.row:hover {
+        background-color: #ADD8E6; 
+    }
+    table#my_windows td a {
+        display: block;
+        line-height: 2em;
+        padding: 0.2em 2em 0.2em 0em;
+        margin: 0px;
+        height: 100%;
+    }
+    table#my_windows td.corpus a {
+        padding-left: 30px;
+        background-image: url('view/octicons-5.0.1/lib/svg/package.svg');
+        background-repeat: no-repeat;
+        background-position: 10px center;
+    }
+    table#my_windows td.corpus-empty a {
+        padding-left: 30px;
+    }
+    table#my_windows td.file a {
+        padding-left: 30px;
+        background-image: url('view/octicons-5.0.1/lib/svg/file.svg');
+        background-repeat: no-repeat;
+        background-position: 10px center;
+    }
+
+
+    table#files_in_system td {
+        padding: 0.2em 2em 0.2em 0em;
+    }
+    table#files_in_system td.corpus {
+        padding-left: 30px;
+        background-image: url('view/octicons-5.0.1/lib/svg/package.svg');
+        background-repeat: no-repeat;
+        background-position: 10px center;
+    }
+    table#files_in_system td.corpus-empty {
+        padding-left: 30px;
+    }
+    table#files_in_system td.file {
+        padding-left: 30px;
+        background-image: url('view/octicons-5.0.1/lib/svg/file.svg');
+        background-repeat: no-repeat;
+        background-position: 10px center;
+    }
+
+
+</style>
+<script type="text/javascript">
+function fillCorpusField(corpusName) {
+    document.getElementById('corpus').value = corpusName;
+    document.getElementById('choose_file_by_corpus_name').checked = true;
+    switchChooseFileInput();
+    switchExpandedSection('open_form');
+};
+function fillFileField(corpusName) {
+    document.getElementById('file').value = corpusName;
+    document.getElementById('choose_file_by_file_name').checked = true;
+    switchChooseFileInput();
+    switchExpandedSection('open_form');
+};
+
+function resetChoices() {
+    document.getElementById('corpus').style.display = 'none';
+    document.getElementById('label_corpus').style.backgroundColor = '#E5E5E5';
+
+    document.getElementById('file').style.display = 'none';
+    document.getElementById('label_file').style.backgroundColor = '#E5E5E5';
+
+};
+function switchChooseFileInput() {
+    if (document.getElementById('choose_file_by_corpus_name').checked) {
+        resetChoices();
+        document.getElementById('corpus').style.display = 'inline';
+        document.getElementById('label_corpus').style.backgroundColor = '#ADD8E6';
+        document.getElementById('corpus').focus();
+    }
+    if (document.getElementById('choose_file_by_file_name').checked) {
+        resetChoices();
+        document.getElementById('file').style.display = 'inline';
+        document.getElementById('label_file').style.backgroundColor = '#ADD8E6';
+        document.getElementById('file').focus();
+    }
+};
+function switchExpandedSection(sec) {
+    var mywins = document.getElementById('my_windows');
+    if (mywins != null)
+       mywins.style.display = 'none';
+
+    var files = document.getElementById('files_in_system');
+    if (files != null)
+        files.style.display = 'none';
+
+    var openform = document.getElementById('open_form');
+    if (openform != null) 
+        openform.style.display = 'none';
+
+    document.getElementById(sec).style.display = 'block';
+}
+function setup() {
+    switchChooseFileInput();
+    document.getElementById('choose_file_by_corpus_name').onchange = switchChooseFileInput;
+    document.getElementById('choose_file_by_file_name').onchange = switchChooseFileInput;
+    
+    switchExpandedSection('open_form');
+};
+</script>
+<body onload="setup()">
+    <a id="admin-link" href="cgicontroller.cgi?a=admin">admin</a>
+
+    <form id="change-user" action="cgicontroller.cgi">
+        change user: 
+        <input name="username" type="text" />
+        <input type="submit" value="go" />
+    </form>
+
+    <h1>$session_id</h1>
+
+    <py-open code="if len(windows) > 0:"/>
+        <h2 class="expanding-heading" onclick="switchExpandedSection('my_windows')">my windows</h2>
+        <table id="my_windows">
+        <tr>
+            <th>corpus</th>
+            <th>file</th>
+            <th>line</th>
+        </tr>
+        <py-open code="for w in windows:"/>
+            <py-line code="wid = w['window_id']" />
+            <py-line code="corpus = w['corpus_name']" />
+            <py-line code="empty = ''" />
+            <py-open code="if corpus == None:" />
+                <py-line code="corpus = ''" />
+                <py-line code="empty = '-empty'" />
+            <py-close />
+            <py-line code="file = w['file_path']" />
+            <py-line code="line = w['viewport_line']" />
+            <tr class="row">
+                <td class="corpus$empty"><a href="cgicontroller.cgi?a=getwin&wid=$wid" target="_blank">$corpus</a></td>
+                <td class="file"><a href="cgicontroller.cgi?a=getwin&wid=$wid" target="_blank">$file</a></td>
+                <td class="line"><a href="cgicontroller.cgi?a=getwin&wid=$wid" target="_blank">$line</a></td>
+            </tr>
+        <py-close/>
+        </table>
+    <py-close/>
+
+    <py-open code="if len(files) > 0:"/>
+        <h2 class="expanding-heading" onclick="switchExpandedSection('files_in_system')">files already in the system</h2>
+        <table id="files_in_system">
+        <tr>
+            <th>corpus</th>
+            <th>file</th>
+        </tr>
+        <py-open code="for f in files:"/>
+            <py-line code="corpus = f['corpus_name']" />
+            <py-line code="empty = ''" />
+            <py-open code="if corpus == None:" />
+                <py-line code="corpus = ''" />
+                <py-line code="empty = '-empty'" />
+            <py-close />
+            <py-line code="file = f['file_path']" />
+            <tr class="row">
+                <td class="corpus$empty"><span class="form-filling-text" onclick="fillCorpusField('$corpus')">$corpus</span></td>
+                <td class="file"><span class="form-filling-text" onclick="fillFileField('$file')">$file</span></td>
+            </tr>
+        <py-close/>
+        </table>
+    <py-close/>
+
+    
+    <h2 class="expanding-heading" onclick="switchExpandedSection('open_form')">open a new window</h2>
+    <form id="open_form" action="cgicontroller.cgi" target="_blank">
+        <input type="hidden" name="a" value="open" />
+
+        <ul class="input-choice">
+            <li onclick="switchChooseFileInput()">
+                <input class="radio-input" type="radio" id="choose_file_by_corpus_name" 
+                name="choose_file" value="by_corpus_name" checked="checked" />
+                <label id="label_corpus" for="choose_file_by_corpus_name" value="by_corpus_name">corpus</label>
+
+                <input class="text-input" type="text" name="corpus" id="corpus" value="" 
+                onfocus="document.getElementById('choose_file_by_corpus_name').checked = true" />
+            </li>
+        
+            <li onclick="switchChooseFileInput()">
+                <input class="radio-input" type="radio" id="choose_file_by_file_name" 
+                name="choose_file" value="by_file_name" />
+                <label id="label_file" for="choose_file_by_file_name">file</label>
+
+                <input class="text-input" type="text" name="file" id="file" value=""
+                onfocus="document.getElementById('choose_file_by_file_name').checked = true" />
+            </li>
+        </ul>
+
+        <br />
+
+        <input type="radio" id="choose_place_by_line" name="choose_place" value="by_line" checked="checked" />
+        <label for="choose_place_by_line" value="by_line">
+            line: <input type="text" name="line" value="1" onfocus="document.getElementById('choose_place_by_line').checked = true" /></label>
+
+        <input type="radio" id="choose_place_by_pos" name="choose_place" value="by_pos" />
+        <label for="choose_place_by_pos" value="by_line">
+            pos: <input type="text" name="pos" value="0" onfocus="document.getElementById('choose_place_by_pos').checked = true" /></label>
+        
+        <br />
+
+        <input id="basic_mode_checkbox" type="checkbox" name="basic_mode" /> 
+        <label for="basic_mode_checkbox">basic mode (no repository so not possible to commit any changes, no index so no fast jump to line or pos)</label>
+                
+        <br />
+
+        <input type="submit" value="open" />
+    </form>
+    
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+petr@krtek:~/fi/BP/editor/src/corpedit/model$ python -m unittest model_test.ApplicationTestCase
+ApplicationTestCase: [created storage dir] /home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/storage_hLb5Dx
+ApplicationTestCase: [created gfs dir] /home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4
+Initialized empty Git repository in /home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/.git/
+[master (root-commit) e81e4d7] initial commit by GitFileSystem
+ 1 file changed, 994 insertions(+)
+ create mode 100644 cztenten_994.vert
+patching file /tmp/tmpctJGcM
+patching file /tmp/tmphiSgzk
+patching file /tmp/tmpTELQ8W
+patching file /tmp/tmpN0F3S4
+patching file /tmp/tmpga2nnm
+patching file /home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4/f89df450b7fecb6e0c70aeb08f18ed40/cztenten_994.vert
+[master ee3ba3e] commit by GitFileSystem
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+patching file /tmp/tmpkEJ9vS
+patching file /tmp/tmpE1PCK3
+patching file /tmp/tmpiB9hRH
+Hunk #1 FAILED at 2.
+1 out of 1 hunk FAILED -- saving rejects to file /tmp/tmpiB9hRH.rej
+FApplicationTestCase: [removed storage dir] /home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/storage_hLb5Dx
+ApplicationTestCase: [removed gfs dir] /home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_dYY4M4
+ApplicationTestCase: [created storage dir] /home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/storage_3rNdZ3
+ApplicationTestCase: [created gfs dir] /home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_pyQXO6
+Initialized empty Git repository in /home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_pyQXO6/f89df450b7fecb6e0c70aeb08f18ed40/.git/
+[master (root-commit) 476c722] initial commit by GitFileSystem
+ 1 file changed, 994 insertions(+)
+ create mode 100644 cztenten_994.vert
+ApplicationTestCase: [removed storage dir] /home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/storage_3rNdZ3
+ApplicationTestCase: [removed gfs dir] /home/petr/fi/BP/editor/src/corpedit/model/testdata_tmp/gfs_pyQXO6
+.
+======================================================================
+FAIL: test_do_some_edits (model_test.ApplicationTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "model_test.py", line 223, in test_do_some_edits
+    model.Application().window_page(w1_id)['viewport_content'],
+  File "model.py", line 97, in window_page
+    pgdata = window.page_data()
+  File "model.py", line 263, in page_data
+    vpc = self.get_viewport_content()
+  File "model.py", line 322, in get_viewport_content
+    seg = my_io.get_segment(block_begin_line=self._viewport_line, block_num_lines=self._viewport_nlines)
+  File "segmentio.py", line 1756, in get_segment
+    segment_data = patch(segment_orig_data, segment_changelog)
+  File "segmentio.py", line 62, in patch
+    assert returncode == 0
+AssertionError
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.079s
+
+FAILED (failures=1)

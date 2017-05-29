@@ -1,0 +1,21 @@
+petr@krtek:~/fi/BP/editor/src/corpedit/model$ python -m unittest segmentio_test
+....................................F...
+======================================================================
+FAIL: test_rebasing_on_vertfile_as_in_model_test (segmentio_test.SegmentIOTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "segmentio_test.py", line 1059, in test_rebasing_on_vertfile_as_in_model_test
+    w1_seg = w1_my_io.get_segment(block_begin_line=67, block_num_lines=5)
+  File "segmentio.py", line 1756, in get_segment
+    segment_data = patch(segment_orig_data, segment_changelog)
+  File "segmentio.py", line 61, in patch
+    returncode = subprocess_call(["patch", data_tempfile.name, changelog_tempfile.name])
+  File "../common.py", line 108, in subprocess_call
+    assert returncode == 0
+AssertionError
+
+----------------------------------------------------------------------
+Ran 40 tests in 1.827s
+
+FAILED (failures=1)
+

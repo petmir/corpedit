@@ -1,0 +1,213 @@
+# === czTenTen12 corpus configuration ===
+# MARX
+#
+# == Changelog ==
+# 2011-12-08
+#   * first version
+# 2012-09-12
+#   * tagged by Desamb
+# 2012-10-02
+#   * wrong lemmata corrected
+# 2013-01-11
+#   * paragraphs containing more than 15 % words unknown/guessed by ajka 
+#     (and not starting with a big letter) removed -- 2 % of paragraphs
+# 2014-03-18
+#   * documents with wrong encoding removed by Marx
+# 2014-05-17
+#   * Malformed vertical lines corrected (MacLeodovy MacL eodůvk2eAgFnPc1d1 --> MacLeodovy MacLeodův k2eAgFnPc1d1).
+# 2014-06-12
+#   * Machine translated documents from domains infostar.cz and navajo.cz removed
+# 2014-08-04
+#   * Paragraphs without accents removed
+# 2014-09-17
+#   * M ? j removed
+
+MAINTAINER "vit.suchomel@sketchengine.co.uk"
+NAME "czTenTen [2012]"
+INFO "Czech web corpus crawled by SpiderLing in 2011 and Heritrix in 2010. Encoded in UTF-8, cleaned, deduplicated. Tagged by Desamb."
+PATH "/corpora/manatee/cztenten12_8/"
+VERTICAL "| xzcat /corpora/vert/tenten/czech2/cztenten12_8.vert.xz"
+ENCODING "utf-8"
+LANGUAGE "Czech"
+
+INFOHREF "http://www.sketchengine.co.uk/cztenten-corpus"
+TAGSETDOC "https://www.sketchengine.co.uk/tagset-reference-for-czech"
+
+WSDEF "/corpora/wsdef/czech-ajka-6.1.wsdef.txt"
+WSATTR "lemma"
+TERMDEF "/corpora/wsdef/czech-majka-terms-1.0.wsdef.m4"
+TERMBASE "/corpora/manatee/cztenten12_8/terms-ws"
+
+WPOSLIST ",noun,k1.*,adjective,k2.*,pronoun,k3.*,numeral,k4.*,verb,k5.*,adverb,k6.*,preposition,k7.*,conjunction,k8.*"
+GDEXDEFAULTCONF "/corpora/gdex/configurations/Slavic_non_lemmatized"
+
+SUBCORPATTRS "p.heading,doc.tld|doc.t2ld|doc.urldomain"
+HARDCUT 0
+MAXCONTEXT 200
+MAXDETAIL 200
+WRAPDETAIL p
+
+ATTRIBUTE word {
+    LOCALE  "cs_CZ.UTF-8"
+    TYPE "FD_FGD"
+}
+ATTRIBUTE   lemma {
+    LOCALE  "cs_CZ.UTF-8"
+    TYPE "FD_FGD"
+}
+ATTRIBUTE   tag {
+    TYPE "FD_FGD"
+}
+ATTRIBUTE   gender_lemma {
+    LOCALE  "cs_CZ.UTF-8"
+    TYPE "FD_FGD"
+}
+
+ATTRIBUTE   lc {
+	LABEL   "word (lowercase)"
+        DYNAMIC  utf8lowercase
+        DYNLIB   internal
+        ARG1     "cs_CZ.UTF-8"
+        FUNTYPE  s
+        FROMATTR word
+        DYNTYPE  index
+        TRANSQUERY      yes
+}
+
+ATTRIBUTE   lemma_lc {
+	LABEL   "lemma (lowercase)"
+        DYNAMIC  utf8lowercase
+        DYNLIB   internal
+        ARG1     "cs_CZ.UTF-8"
+        FUNTYPE  s
+        FROMATTR lemma
+        DYNTYPE  index
+        TRANSQUERY      yes
+}
+
+ATTRIBUTE   k {
+         DYNAMIC getnextchar
+         DYNLIB  internal
+         ARG1    "k"
+         FUNTYPE c
+         FROMATTR tag
+         DYNTYPE freq
+}
+
+ATTRIBUTE   g {
+         DYNAMIC getnextchar
+         DYNLIB  internal
+         ARG1    "g"
+         FUNTYPE c
+         FROMATTR tag
+         DYNTYPE freq
+}
+
+ATTRIBUTE   n {
+         DYNAMIC getnextchar
+         DYNLIB  internal
+         ARG1    "n"
+         FUNTYPE c
+         FROMATTR tag
+         DYNTYPE freq
+}
+
+ATTRIBUTE   c {
+        DYNAMIC getnextchar
+        DYNLIB  internal
+         ARG1    "c"
+         FUNTYPE c
+         FROMATTR tag
+         DYNTYPE freq
+}
+
+ATTRIBUTE   p {
+        DYNAMIC getnextchar
+        DYNLIB  internal
+         ARG1    "p"
+         FUNTYPE c
+         FROMATTR tag
+         DYNTYPE freq
+}
+
+ATTRIBUTE   m {
+        DYNAMIC getnextchar
+        DYNLIB  internal
+         ARG1    "m"
+         FUNTYPE c
+         FROMATTR tag
+         DYNTYPE freq
+}
+
+
+
+STRUCTURE doc {
+    TYPE "map64"
+    #ATTRIBUTE xdedupl_id {
+    #    LABEL "doc.id"
+    #}
+    #ATTRIBUTE length {
+    #    DEFAULTVALUE ""
+    #}
+    ATTRIBUTE url {
+        TYPE "UNIQUE"
+    }
+    ATTRIBUTE t2ld {
+        LABEL "Second level domain"
+        DYNAMIC url2domain
+        DYNLIB   internal
+        ARG1     "2"
+        FUNTYPE  i
+        FROMATTR url
+        DYNTYPE  index
+    }
+    ATTRIBUTE tld {
+        LABEL "Top level domain"
+        DYNAMIC url2domain
+        DYNLIB   internal
+        ARG1     "1"
+        FUNTYPE  i
+        FROMATTR url
+	DYNTYPE	freq
+    }
+    ATTRIBUTE urldomain {
+        LABEL "Web domain"
+        DYNAMIC url2domain
+        DYNLIB   internal
+        ARG1     "0"
+        FUNTYPE  i
+        FROMATTR url
+        DYNTYPE  index
+    }
+    ATTRIBUTE wordcount
+}
+
+STRUCTURE p {
+    TYPE "map64"
+    ATTRIBUTE heading {
+        DEFAULTVALUE 0
+    }
+    #ATTRIBUTE accents {
+    #    DEFAULTVALUE ""
+    #}
+}
+
+STRUCTURE s {
+    TYPE "file64"
+    #ATTRIBUTE desamb {
+    #    DEFAULTVALUE ""
+    #}
+}
+
+STRUCTURE g {
+    TYPE "file64"
+    DISPLAYTAG 0
+    DISPLAYBEGIN "_EMPTY_"
+}
+
+#STRUCTURE gap {
+#    TYPE "map64"
+#    #ATTRIBUTE words
+#}
+
+

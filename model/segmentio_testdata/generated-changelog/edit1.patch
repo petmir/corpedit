@@ -1,0 +1,12 @@
+--- file.txt	2016-12-03 20:08:43.650667071 +0100
++++ file-after-edit.txt	2016-12-03 20:08:43.650667071 +0100
+@@ -1,6 +1,6 @@
+-first
+-second
+-third
++1st
++2nd
++3rd
+ fourth
+ fifth
+ sixth

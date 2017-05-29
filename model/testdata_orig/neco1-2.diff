@@ -1,0 +1,25 @@
+--- neco1.txt	2016-02-02 15:01:29.040931000 +0100
++++ neco2.txt	2016-02-02 17:20:02.417185202 +0100
+@@ -3,16 +3,20 @@
+ * základní návrh
+ * backend: 
+     - navrhnout, jak bude konkrétně fungovat (včetně využítí gitu)
+-    - vyzkoušet postup ručně, vytvořit ukázkový skript 
+-* frontend: 
++    - vyzkoušet postup šmějdovitě, vytvořit ukázkový skript 
++* frontend - tj. užitatelské rozhraní: 
+     - vyzkoušet si vytvoření jednoduché webové aplikace v pythonu s využitím CGI
+     - (nejdřív prototyp?) navrhnout a naimplementovat základní uživatelské rozhraní, propojit s backendem
+     - přidat ajax 
++HEEEE *[ závorka hranatá!!!] atd.
+ * po vytvoření základní verze umožnit aplikaci vyzkoušet a dál ji rozšiřovat a předělávat
+ 
+ zásady
+ ======
+ * MVC
++tkk
++msrv
++hehe
+ * TDD
+ 
+ odkazy

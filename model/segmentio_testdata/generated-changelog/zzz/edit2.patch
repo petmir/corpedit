@@ -1,0 +1,19 @@
+--- file.txt
++++ file-after-edit.txt
+@@ -1,12 +1,13 @@
+ 1st
+ 2nd
+-3rd
+-fourth
+ fifth
+ sixth
++ADDING
++3
++LINES
+ seventh
+ eighth
+-ninth
++9th
+ tenth
+ eleventh
+ twelfth

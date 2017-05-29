@@ -1,0 +1,19 @@
+--- file.txt	2016-12-03 20:08:43.670667071 +0100
++++ file-after-edit.txt	2016-12-03 20:08:43.678667071 +0100
+@@ -1,12 +1,13 @@
+ 1st
+ 2nd
+-3rd
+-fourth
+ fifth
+ sixth
++ADDING
++3
++LINES
+ seventh
+ eighth
+-ninth
++9th
+ tenth
+ eleventh
+ twelfth

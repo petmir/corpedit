@@ -1,0 +1,252 @@
+patching file /tmp/tmp64fLLn
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp64fLLn', '/tmp/tmp4KLZXX']>
+patching file /tmp/tmpSdJAp8
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpSdJAp8', '/tmp/tmphxukFJ']>
+patching file /tmp/tmpJ781aj
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpJ781aj', '/tmp/tmpwD4x5r']>
+patching file /tmp/tmpx3MJLS
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpx3MJLS', '/tmp/tmpLp8wDD']>
+patching file /tmp/tmpta_SKo
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpta_SKo', '/tmp/tmpmeXf7b']>
+patching file /tmp/tmpLqlAgN
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpLqlAgN', '/tmp/tmphKKVlE']>
+patching file /tmp/tmpvhVlXp
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpvhVlXp', '/tmp/tmp1bc1Ea']>
+patching file /tmp/tmpLEVX5m
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpLEVX5m', '/tmp/tmpTbLuZ8']>
+patching file /tmp/tmp3SpQD2
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp3SpQD2', '/tmp/tmptVIl0j']>
+patching file /tmp/tmpzrCWLg
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpzrCWLg', '/tmp/tmpMAnc_c']>
+patching file /tmp/tmpSn6vnx
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpSn6vnx', '/tmp/tmpECxymz']>
+patching file /tmp/tmpCfiUEo
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpCfiUEo', '/tmp/tmpfoY1du']>
+patching file /tmp/tmppdiAMK
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmppdiAMK', '/tmp/tmpePLUWt']>
+patching file /tmp/tmp3Y_ZKc
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp3Y_ZKc', '/tmp/tmpcPzD3w']>
+patching file /tmp/tmpSIu5pO
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpSIu5pO', '/tmp/tmp5EBCTN']>
+patching file /tmp/tmpm1Rpuf
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpm1Rpuf', '/tmp/tmpGuaMRV']>
+patching file /tmp/tmpQiHD8r
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpQiHD8r', '/tmp/tmpIzOrDO']>
+patching file /tmp/tmphdVMQe
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmphdVMQe', '/tmp/tmpdUR_hV']>
+patching file /tmp/tmp_oHY90
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp_oHY90', '/tmp/tmp1p6ZnL']>
+patching file /tmp/tmpyECjqt
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpyECjqt', '/tmp/tmpizL8_O']>
+patching file /tmp/tmpwBs7g0
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpwBs7g0', '/tmp/tmpKrdxpZ']>
+patching file /tmp/tmpmI3bfv
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpmI3bfv', '/tmp/tmpRpxRC7']>
+patching file /tmp/tmpBZZBe8
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpBZZBe8', '/tmp/tmpGsihbq']>
+patching file /tmp/tmpmIKeD3
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpmIKeD3', '/tmp/tmpiHlAHa']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpou7Cej', '/tmp/tmp7Nd4qx']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpuXb7gj', '/tmp/tmpm_IqtU']>
+patching file /tmp/tmp4kyZS5
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp4kyZS5', '/tmp/tmpJw8Gnw']>
+patching file /tmp/tmpJVqrp9
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpJVqrp9', '/tmp/tmpkwrC1P']>
+patching file /tmp/tmprSQehT
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmprSQehT', '/tmp/tmp9cK4GS']>
+patching file /tmp/tmpM3A4qs
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpM3A4qs', '/tmp/tmpL9HV5j']>
+patching file /tmp/tmpvM31ce
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpvM31ce', '/tmp/tmpDSdSXY']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp9TYEVx', '/tmp/tmpMBWJbz']>
+patching file /tmp/tmpky0pxK
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpky0pxK', '/tmp/tmpj25DnF']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmps4yLMf', '/tmp/tmp2mCU2p']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpH22FQf', '/tmp/tmpwnfzmE']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpBXQWuu', '/tmp/tmpspTQNB']>
+patching file /tmp/tmpJdZZPT
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpJdZZPT', '/tmp/tmp5ef1ty']>
+patching file /tmp/tmp1CF40c
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp1CF40c', '/tmp/tmpXM1arD']>
+patching file /tmp/tmpWsdsXr
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpWsdsXr', '/tmp/tmp6Arooc']>
+patching file /tmp/tmpMqjf15
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpMqjf15', '/tmp/tmpyD4m1_']>
+patching file /tmp/tmpvmZX3a
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpvmZX3a', '/tmp/tmpH34vlE']>
+patching file /tmp/tmpwE7mlm
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpwE7mlm', '/tmp/tmpNEEidJ']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpYLaH2P', '/tmp/tmpvdsrRn']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp2iI4s1', '/tmp/tmpiMTHVP']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp5mSisZ', '/tmp/tmpQK0mYV']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpFZBalB', '/tmp/tmpK5BduW']>
+patching file /tmp/tmpY8PcvH
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpY8PcvH', '/tmp/tmpvG58sw']>
+patching file /tmp/tmpUF5ggR
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpUF5ggR', '/tmp/tmp2GYshh']>
+patching file /tmp/tmp1DWFpO
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp1DWFpO', '/tmp/tmpn31qFh']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpw6UB0C', '/tmp/tmpr2vJ9_']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpRuKpsB', '/tmp/tmpJeUcBl']>
+patching file /tmp/tmpQNfUJi
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpQNfUJi', '/tmp/tmpyQb90W']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpDTXYLk', '/tmp/tmpEynaPu']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpjF8c4T', '/tmp/tmpPYzorY']>
+patching file /tmp/tmpTZdQg5
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpTZdQg5', '/tmp/tmptFqG3m']>
+patching file /tmp/tmpnL51Yl
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpnL51Yl', '/tmp/tmp2GcBma']>
+patching file /tmp/tmpFrkCpN
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpFrkCpN', '/tmp/tmpf2OI1p']>
+patching file /tmp/tmpRbZFl8
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpRbZFl8', '/tmp/tmpxdq73N']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpT8v1Mv', '/tmp/tmpMQwYas']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpwOo7_s', '/tmp/tmpipYJLX']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp2efpwU', '/tmp/tmpdd2fXR']>
+patching file /tmp/tmptwOOb3
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmptwOOb3', '/tmp/tmpynSXjz']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpPi8fFO', '/tmp/tmpgxpkcn']>
+patching file /tmp/tmpHDyimO
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpHDyimO', '/tmp/tmp7W3MNM']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpWVXGjh', '/tmp/tmphS8H_d']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmppsu5fn', '/tmp/tmpfoJgp0']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp2JV5UV', '/tmp/tmpp10vnc']>
+patching file /tmp/tmpBlhz9X
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpBlhz9X', '/tmp/tmpnPC1Uy']>
+patching file /home/petr/fi/BP/editor/src/corpedit/model/example_edited_files/cztenten_994_copy.vert
+<silent (output logged here) subprocess.call: ['patch', u'/home/petr/fi/BP/editor/src/corpedit/model/example_edited_files/cztenten_994_copy.vert', u'/home/petr/fi/BP/editor/src/corpedit/model/example_edited_files/cztenten_994_copy.vert.patch']>
+patching file /tmp/tmpnI8YpY
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpnI8YpY', '/tmp/tmpKUQwou']>
+patching file /tmp/tmpQbDsIk
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpQbDsIk', '/tmp/tmptaOiFY']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp1Air9m', '/tmp/tmpkCqkrk']>
+patching file /tmp/tmpQ6JXjU
+Hunk #1 FAILED at 2.
+1 out of 1 hunk FAILED -- saving rejects to file /tmp/tmpQ6JXjU.rej
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpQ6JXjU', '/tmp/tmplHkuY9']>
+patching file /tmp/tmpAaTScj
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpAaTScj', '/tmp/tmpEj5w5Q']>
+patching file /tmp/tmpOuUeNR
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpOuUeNR', '/tmp/tmpLiuHjp']>
+patching file /tmp/tmpnQzIm5
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpnQzIm5', '/tmp/tmpPwmBVB']>
+patching file /tmp/tmpp3seDp
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpp3seDp', '/tmp/tmpcWoXoW']>
+patching file /tmp/tmpCotqby
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpCotqby', '/tmp/tmpQnTjQ7']>
+patching file /tmp/tmp2UW2ZE
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp2UW2ZE', '/tmp/tmpu2kbDm']>
+patching file /tmp/tmpnNtZW9
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpnNtZW9', '/tmp/tmp1qUibw']>
+patching file /tmp/tmpvFOnyN
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpvFOnyN', '/tmp/tmpJV7Hpr']>
+patching file /tmp/tmpNaRTzw
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpNaRTzw', '/tmp/tmpGQtY3J']>
+patching file /tmp/tmpSXcRUs
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpSXcRUs', '/tmp/tmpNhuO_Z']>
+patching file /tmp/tmpTjte1P
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpTjte1P', '/tmp/tmpv4L5IG']>
+patching file /tmp/tmpsFdOi_
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpsFdOi_', '/tmp/tmplAZz9j']>
+patching file /tmp/tmp9Ksfsq
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp9Ksfsq', '/tmp/tmpj9YnhA']>
+patching file /tmp/tmpv2wLaU
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpv2wLaU', '/tmp/tmppiRadu']>
+patching file /tmp/tmpogHkpJ
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpogHkpJ', '/tmp/tmpLrtlPP']>
+patching file /tmp/tmpTdvzgs
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpTdvzgs', '/tmp/tmpQ_OzAY']>
+patching file /tmp/tmpPXBHAT
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpPXBHAT', '/tmp/tmpP5VVDp']>
+patching file /tmp/tmp43uud9
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp43uud9', '/tmp/tmpn8ttv6']>
+patching file /tmp/tmpx6B7qB
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpx6B7qB', '/tmp/tmpAg5Bvt']>
+patching file /tmp/tmpKiYLuB
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpKiYLuB', '/tmp/tmpb2S1nL']>
+patching file /tmp/tmpa4Ivqy
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpa4Ivqy', '/tmp/tmpYqQvBy']>
+patching file /tmp/tmp0LR3ls
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp0LR3ls', '/tmp/tmpOZUWIK']>
+patching file /tmp/tmpX1dn5g
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpX1dn5g', '/tmp/tmptXakFl']>
+patching file /tmp/tmpdOcRZA
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpdOcRZA', '/tmp/tmpdW32UL']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpzSXVIY', '/tmp/tmpQ4K_x7']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpexPeZt', '/tmp/tmpoEVdhU']>
+patching file /tmp/tmp97cG7X
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp97cG7X', '/tmp/tmp50ur00']>
+patching file /tmp/tmpsiD0Jt
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpsiD0Jt', '/tmp/tmpKn55DF']>
+patching file /tmp/tmpuHflrX
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpuHflrX', '/tmp/tmpZng8ZA']>
+patching file /tmp/tmpBxZ85s
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpBxZ85s', '/tmp/tmpZWIIiH']>
+patching file /tmp/tmpXXeC6e
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpXXeC6e', '/tmp/tmpCLPXAG']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpGJAzG_', '/tmp/tmpBZ62cC']>
+patching file /tmp/tmpQoCAyj
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpQoCAyj', '/tmp/tmpy2PFxb']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp2QL1da', '/tmp/tmpzU2cty']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpxXgeVT', '/tmp/tmpSr77D0']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp2S2TX3', '/tmp/tmp2tPzuR']>
+patching file /tmp/tmp5NDLKM
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp5NDLKM', '/tmp/tmpbh20MF']>
+patching file /tmp/tmppj42Pu
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmppj42Pu', '/tmp/tmpJcX2QN']>
+patching file /tmp/tmpbia2Zi
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpbia2Zi', '/tmp/tmpTvZIZ3']>
+patching file /tmp/tmpDFXEuS
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpDFXEuS', '/tmp/tmpfKxowW']>
+patching file /tmp/tmpMHpS4Q
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpMHpS4Q', '/tmp/tmpTl8SOn']>
+patching file /tmp/tmpUA2hDr
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpUA2hDr', '/tmp/tmpEj9wGc']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpFUI7aO', '/tmp/tmp5cfBjK']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpMZFDvW', '/tmp/tmpykLrWl']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpQhjRK3', '/tmp/tmp7v5F5H']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpC7UMqW', '/tmp/tmp9KsPmt']>
+patching file /tmp/tmpBnXMRn
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpBnXMRn', '/tmp/tmpzLpnhF']>
+patching file /tmp/tmpudOddN
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpudOddN', '/tmp/tmpMRYXP0']>
+patching file /tmp/tmpmko0br
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpmko0br', '/tmp/tmpDco7cl']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpixTpZH', '/tmp/tmpQ2JIA5']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpb1i2QZ', '/tmp/tmp7THl73']>
+patching file /tmp/tmp9bVm4v
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp9bVm4v', '/tmp/tmp2BuGKo']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpkLxeRQ', '/tmp/tmpJqz1XZ']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpAt1zqs', '/tmp/tmpafP8Em']>
+patching file /tmp/tmp4lBmpy
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp4lBmpy', '/tmp/tmpDI8__h']>
+patching file /tmp/tmpDt9gZU
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpDt9gZU', '/tmp/tmpJsADQs']>
+patching file /tmp/tmpeb3z8u
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpeb3z8u', '/tmp/tmpYSgAjm']>
+patching file /tmp/tmpyIzxpn
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpyIzxpn', '/tmp/tmpG_LmQI']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpCK0HwU', '/tmp/tmpdsFlQe']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpADG3Fz', '/tmp/tmp4JdYRB']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpeZ_wDh', '/tmp/tmpAIEFP3']>
+patching file /tmp/tmp7uJlBZ
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp7uJlBZ', '/tmp/tmpSJMra8']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpwq4sdd', '/tmp/tmpIt7ClN']>
+patching file /tmp/tmp3lMgDI
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp3lMgDI', '/tmp/tmpoExEAx']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpR8jC1i', '/tmp/tmpB06iuO']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp0tp8fV', '/tmp/tmpngIbM3']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmphTfWBn', '/tmp/tmpeUskbY']>
+patching file /tmp/tmpv64sa6
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpv64sa6', '/tmp/tmpc9Jv_C']>
+patching file /home/petr/fi/BP/editor/src/corpedit/model/example_edited_files/cztenten_994_copy.vert
+<silent (output logged here) subprocess.call: ['patch', u'/home/petr/fi/BP/editor/src/corpedit/model/example_edited_files/cztenten_994_copy.vert', u'/home/petr/fi/BP/editor/src/corpedit/model/example_edited_files/cztenten_994_copy.vert.patch']>
+patching file /tmp/tmpiTffF7
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpiTffF7', '/tmp/tmpO4vZQS']>
+patching file /tmp/tmpO2W7Pb
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpO2W7Pb', '/tmp/tmpQDqNbt']>
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmpq7XOIy', '/tmp/tmpDkgX8O']>
+patching file /tmp/tmp4QjrZQ
+Hunk #1 FAILED at 2.
+1 out of 1 hunk FAILED -- saving rejects to file /tmp/tmp4QjrZQ.rej
+<silent (output logged here) subprocess.call: ['patch', '/tmp/tmp4QjrZQ', '/tmp/tmpI7G1Du']>

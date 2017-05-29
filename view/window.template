@@ -1,0 +1,578 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+<head>
+    <title>[sid: $session_id, file: $file_path] $title
+        <py-open code="if basic_mode:"/>(basic mode)<py-close/>
+    </title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="view/jquery-3.2.1.js"></script>
+
+    <!-- begin headers for editing area columns -->
+    <script src="view/viewport/codemirror-5.25.2/lib/codemirror.js"></script>
+    <script src="view/viewport/codemirror-5.25.2/addon/selection/active-line.js"></script>
+
+    <script src="view/viewport/codemirror-5.25.2/addon/mode/simple.js"></script>
+    <script src="view/viewport/vertmode.js"></script>
+
+    <!-- how to put this stylesheet in a separate file so that it still has the id? -->
+    <style id="space-markings-stylesheet" type="text/css">
+        /* This is a dynamically created stylesheet that adjusts the displayed width 
+        of spaces between words so that the words appear in columns. */
+        .adjusted-space-1 {
+            background-color: red;
+            width: 100px;
+        }
+    </style> 
+    <script src="view/viewport/columns.js"></script>
+    <link rel="stylesheet" href="view/viewport/columns.css">
+    <link rel="stylesheet" href="view/viewport/codemirror-5.25.2/lib/codemirror.css">
+    <script src="view/viewport/vertmode.js"></script>
+
+    <!-- horizontal view -->
+    <script type="text/javascript" src="view/horizontal/jquery-sortable.js"></script>
+    <script type="text/javascript" src="view/horizontal/horizontal.js"></script>
+    <link rel="stylesheet" href="view/horizontal/horizontal.css">
+
+    <!-- autocomplete -->
+    <link rel="stylesheet" href="view/viewport/codemirror-5.25.2/addon/hint/show-hint.css">
+    <script src="view/viewport/codemirror-5.25.2/addon/hint/show-hint.js"></script>
+    <script src="view/viewport/codemirror-5.25.2/addon/hint/javascript-hint.js"></script>
+    <script type="text/javascript" src="view/autocomplete/autocomplete.js"></script>
+
+
+
+    <script type="text/javascript">
+
+    // source: stackoverflow.com/questions/15313418/javascript-assert
+    function assert(condition, message) {
+        if (!condition) {
+            message = message || "Assertion failed";
+            if (typeof Error !== "undefined") {
+                throw new Error(message);
+            }
+            throw message; // Fallback
+        }
+    }
+
+    // source: stackoverflow.com/questions/1787322/htmlspecialchars-equivalent-in-javascript
+    function escapeHtml(text) {
+      return text
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+    }
+
+    function strip_trailing_newline(str) {
+        return str.replace(/\n$/, "");
+    }
+    function add_trailing_newline(str) {
+        return str + "\n";
+    }
+
+    function first_word(str) {
+        var WHITESPACE_MAX_CHARCODE = 32;
+        if (str.length > 0) {
+            if (str[0] == '<') {
+                // tag
+                return str;
+            } else {
+                // word
+                for (c = 0; c < str.length; c++) {
+                    if (str.charCodeAt(c) <= WHITESPACE_MAX_CHARCODE) 
+                        break;
+                }
+                return str.substr(0, c);
+            }
+        } else {
+            // nothing
+            return '!!!(empty)!!!'
+        }
+    }
+
+    function word_class(str) {
+        if (str.length > 0) {
+            if (str[0] == '<') {
+                // tag
+                return 'word-class-tag';
+            } else {
+                // word
+                return 'word-class-word';
+            }
+        } else {
+            // nothing
+            return 'word-class-error';
+        }
+    }
+
+
+    var prevLineCount = 0;
+    var vpCM;  // the CodeMirror instance used as the viewport
+    var vpUpdateHandler = function () {
+        // adjust the viewport size 
+        // (NOTE: I couldn't get autoresize to work in 
+        // this new CodeMirror version so I'm doing the resize myself)
+        var lineHeight = vpCM.defaultTextHeight();
+        var numLines = vpCM.lineCount();
+        if (numLines != prevLineCount) {
+            vpCM.setSize(null, lineHeight * (numLines + 0.5));  // the last line was slightly overflowing so I'm adding half a line extra
+            prevLineCount = numLines;
+        }
+
+        // put the new content in the horizontal view
+        toHorizontal();
+
+        // show the viewport with the new content, ready to be used
+        //vpCM.getWrapperElement().style.visibility = 'visible'; 
+        document.getElementById('loading').style.display = 'none';
+    }
+
+    function toHorizontal() {
+        var lines = vpCM.getValue().split('\n');
+        var hvlist = document.getElementById("hvlist");
+        hvlist.innerHTML = '';
+        for (var i = 0; i < lines.length; i++) {
+            line = lines[i];
+            word = first_word(line);
+            //alert(word);
+            hvlist.innerHTML += 
+                '<li class="' + word_class(word) + 
+                '" data-id="'+ i + 
+                '" data-name="'+ escapeHtml(word) + 
+                '" onclick="moveCursorToWord(' + i + ')">' + 
+                escapeHtml(word) + 
+                '</li>';
+        }
+    }
+
+    function moveCursorToWord(i) {
+        vpCM.setCursor(i, 0);
+        vpCM.focus();
+    }
+
+
+    function fromHorizontal(horizontalData) {
+        var lines = vpCM.getValue().split('\n');
+        var newViewportContent = '';
+        for (var i = 0; i < lines.length; i++) {
+            newViewportContent += lines[horizontalData[0][i].id] + "\n";
+        }
+        newViewportContent = strip_trailing_newline(newViewportContent);
+        disableViewport();
+        vpCM.setValue(newViewportContent);
+    }
+
+
+    //console.log(document.getElementById("kek").style.color);
+    var initViewportContent = "LOADING CONTENT...\n";
+    assert(initViewportContent.slice(-1) == "\n", "initViewportContent must end with a newline");
+    var loadedViewportContent = initViewportContent;
+    function f() {
+        vpCM = createViewport(strip_trailing_newline(initViewportContent), $viewport_line, vpUpdateHandler);
+
+        // hook up the horizontal view
+        setHorizontalUpdateHandler(fromHorizontal);
+
+        // hook up autocomplete
+        vpCM.setOption('extraKeys', {'Ctrl-Space': 'autocomplete'});
+        vpCM.setOption('hintOptions', {hint: synonyms});
+    }
+    $(window).on('load', f);
+
+
+
+    function displayPythonErrorPage(errorPageText) {
+        document.getElementById('python_error').style.display = 'block';
+        var doc = document.getElementById('python_error').contentWindow.document;
+        doc.open();
+        doc.write(escapeHtml(errorPageText));
+        doc.close();
+    }
+
+    function Viewport(currentLine, numLines, 
+            contentElement, lineNumElement) {
+
+        /* -- private variables and methods -- */
+
+        var loadSegment = function(line, cmd, cmdArgs) {
+            // NOTE: The arguments <cmd>, <cmdArgs> are optional. 
+            //       If <cmd> is not defined, the function simply loads the segment at <line>. 
+            //       If <cmd> is defined, what the function does depends on <cmd>: 
+            //       * cmd === "find_before" or "find_after": 
+            //              Load the result of the search of cmdArgs.searchString, 
+            //              starting at <line>.
+
+            //vpCM.getWrapperElement().style.visibility = 'hidden'; 
+            disableViewport();
+            document.getElementById('loading').style.display = 'block';
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    displayPythonErrorPage(xhr.responseText);
+                    var responseObj = JSON.parse(xhr.responseText);
+
+                    //contentElement.innerHTML = responseObj.viewport_content;
+                    //myCodeMirror.setFirstLineNumber(responseObj.viewport_line)
+
+                    // -- the line indicator --
+                    currentLine = responseObj.viewport_line;
+                    lineNumElement.value = currentLine;
+
+                    // -- the lockedness of the file and the commit button (if the file is not locked) --
+                    if (responseObj.file_lock == "locked") {
+                        document.getElementById("commitbar").innerHTML = '<strong>locked</strong>';
+
+                        document.getElementById("commitbar").innerHTML += ' <a href="?a=unlock&wid=' + wid + 
+                            '" onclick="return confirm(\'Are you sure you want to unlock the file?\')">[unlock]</a>';
+                    }
+                    else {
+                        wid = document.getElementById("window_id").innerHTML
+                        document.getElementById("commitbar").innerHTML = '<a href="?a=lock&wid=' + wid + 
+                            '" onclick="return confirm(\'Are you sure you want to lock the file?\')">[lock]</a>';
+
+                        if (responseObj.window_changelog != "") {
+                            document.getElementById("commitbar").innerHTML += ' <a href="?a=commit&wid=' + wid + 
+                                '" onclick="return confirm(\'Are you sure you want to commit the changes in this window to the file?\')">[commit]</a>';
+                        } else {
+                            document.getElementById("commitbar").innerHTML += ' (no changes)';
+                        }
+                    }
+
+                    // -- the viewport -- 
+                    loadedViewportContent = responseObj.viewport_content;
+                    assert(loadedViewportContent.slice(-1) == "\n", "viewport_content in the server's ajax response must end with a newline");
+                    vpCM.setValue(strip_trailing_newline(loadedViewportContent));
+                    vpCM.setOption("firstLineNumber", currentLine);
+                    //vpCM = createViewport(responseObj.viewport_content, currentLine);
+
+                    // -- the window changelog and status information --
+                    //console.log(responseObj.status);
+                    document.getElementById("changelog_from_head").innerHTML = responseObj.changelog_from_head;
+                    document.getElementById("window_changelog").innerHTML = responseObj.window_changelog;
+                    document.getElementById("total_changelog").innerHTML = responseObj.total_changelog;
+                    document.getElementById("ajax_status").innerHTML = escapeHtml(responseObj.status);
+
+                    // -- fill in the horizontal view --
+                    toHorizontal();
+
+                    // -- check the tags in the viewport --
+                    checkTags(responseObj.window_changelog);
+                }
+            }
+
+
+            wid = document.getElementById("window_id").innerHTML
+
+            //url = "cgicontroller.cgi?a=ajax_getwin&wid="+wid+"&line="+line;
+            //alert(url);
+
+            url = "cgicontroller.cgi";
+
+            // NOTE: for testing if the request is being interpreted right
+            //url = "http://localhost/post-form.cgi"  
+
+            //xhr.open("GET", url, true);
+            xhr.open("POST", url, true);
+
+            // NOTE: This... 
+            //
+            //xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); 
+            //params = "a=ajax_getwin&wid="+wid+"&line="+line
+            //
+            // ...is not usable for long data such as the content of the viewport.
+
+            xhr.setRequestHeader("Content-type", "multipart/form-data; boundary=param");
+
+            if (typeof cmd === "undefined") {
+                // the default command: load the segment beginning on the line
+                params = "--param\n" + "Content-Disposition: form-data; name=\"a\"\n\n" + "ajax_getwin" + "\n" + 
+                          "--param\n" + "Content-Disposition: form-data; name=\"wid\"\n\n" + wid + "\n" + 
+                          "--param\n" + "Content-Disposition: form-data; name=\"line\"\n\n" + line + "\n";
+            } else {
+                // some other command
+                if (cmd === "find_before") {
+                    params = "--param\n" + "Content-Disposition: form-data; name=\"a\"\n\n" + "ajax_getwin_find_before" + "\n" + 
+                              "--param\n" + "Content-Disposition: form-data; name=\"wid\"\n\n" + wid + "\n" + 
+                              "--param\n" + "Content-Disposition: form-data; name=\"line\"\n\n" + line + "\n" + 
+                              "--param\n" + "Content-Disposition: form-data; name=\"search_string\"\n\n" + cmdArgs.searchString + "\n";
+                } else if (cmd === "find_after") {
+                    params = "--param\n" + "Content-Disposition: form-data; name=\"a\"\n\n" + "ajax_getwin_find_after" + "\n" + 
+                              "--param\n" + "Content-Disposition: form-data; name=\"wid\"\n\n" + wid + "\n" + 
+                              "--param\n" + "Content-Disposition: form-data; name=\"line\"\n\n" + line + "\n" + 
+                              "--param\n" + "Content-Disposition: form-data; name=\"search_string\"\n\n" + cmdArgs.searchString + "\n";
+                } else {
+                    assert(false, "unknown command: " + cmd);
+                }
+            }
+
+            viewportContent = add_trailing_newline(vpCM.getValue());
+            /*alert("viewportContent:[" + viewportContent + "]"); 
+            alert("initViewportContent:[" + initViewportContent + "]");
+            alert("loadedViewportContent:[" + loadedViewportContent + "]");*/
+            if (viewportContent != initViewportContent && viewportContent != loadedViewportContent) {
+                // sending the modified viewport content to save it
+                params += "--param\n" + 
+                    "Content-Disposition: form-data; name=\"save_vp_content\"\n\n" + 
+                    viewportContent + "\n";
+            }
+            params += "--param--\n";
+
+            //xhr.send();
+            xhr.send(params);
+        }
+
+
+        var checkTags = function(changelog) {
+            var tagcheckbar = document.getElementById("tagcheckbar");
+            tagcheckbar.innerHTML = ""
+            //var reIsOpenTag = new RegExp('^<([a-z]+)(\\s[a-z]+=\\"[^\\"]*\\")*\\s*>\\s*$');
+            //var reIsCloseTag = new RegExp('^</([a-z]+)>\\s*$');
+            //var lines = vpCM.getValue().split('\n');
+            var reIsOpenTag = new RegExp('([+-])<([a-z]+)(\\s[a-z]+=\\"[^\\"]*\\")*\\s*>\\s*$');
+            var reIsCloseTag = new RegExp('([+-])</([a-z]+)>\\s*$');
+            var lines = changelog.split('\n');
+            var tags = Array();
+            for (var i = 0; i < lines.length; i++) {
+                line = lines[i];
+                //alert(line);
+                var match = reIsOpenTag.exec(line);
+                if (match != null) {
+                    var tag = {plusOrMinus: match[1], tagName: match[2], openOrClose: "open"}
+                    //tagcheckbar.innerHTML += "[open: "+escapeHtml(line)+", tagName:"+escapeHtml(match[2])+", K:"+escapeHtml(tag.plusOrMinus)+"]";
+                    tags.push(tag);
+                } 
+
+                var match = reIsCloseTag.exec(line);
+                if (match != null) {
+                    var tag = {plusOrMinus: match[1], tagName: match[2], openOrClose: "close"}
+                    //tagcheckbar.innerHTML += "[close: "+escapeHtml(line)+", tag:"+escapeHtml(match[2])+", K:"+escapeHtml(tag.plusOrMinus)+"]";
+                    tags.push(tag);
+                } 
+            }
+
+
+            // openness/closedness of tags is OK if we end with an empty stack
+            var stack = [];
+            console.log(tags.length);
+            for (var i = 0; i < tags.length; i++) {
+                var tag = tags[i];
+                var ontop = stack.pop();
+                console.log(ontop);
+                if (ontop === undefined) {
+                    stack.push(tag);
+                } else {
+
+                    if (tag.tagName === ontop.tagName) {
+                        if (tag.openOrClose === ontop.openOrClose) {
+                            if (tag.plusOrMinus === ontop.plusOrMinus) {
+                                stack.push(ontop);
+                                stack.push(tag);
+                            } else {
+                                // matching
+                            }
+                        } else {
+                            if (tag.plusOrMinus === ontop.plusOrMinus) {
+                                // matching
+                            } else {
+                                stack.push(ontop);
+                                stack.push(tag);
+                            }
+                        }
+
+                    } else {
+                        // different tag names are never matching
+                        stack.push(ontop);
+                        stack.push(tag);
+                    }
+
+                }
+            }
+
+            // what remains in the stack...
+            //alert(stack.length);
+            //for (var i = 0; i < stack.length; i++) {
+            //    var tag = stack[i];
+            //    tagcheckbar.innerHTML += "( "+tag.plusOrMinus+":"+tag.tagName+":"+tag.openOrClose+")";
+            //}
+
+            // show a warning if the stack is not empty
+            if (stack.length > 0) {
+                tagcheckbar.innerHTML = "warning: Edits in this window change whether tags are properly opened and closed.";
+            }
+        }
+
+
+        /* -- public methods -- */
+
+
+        this.getNumLines = function(){
+            return numLines;
+        }
+
+        this.jumpToLine = function(newLine) {
+            loadSegment(newLine);
+        }
+
+        this.scrollUp = function() {
+            newLine = currentLine - 1;
+            if (newLine >= 1) {
+                this.jumpToLine(newLine);
+            }
+        }
+
+        this.scrollDown = function() {
+            newLine = currentLine + 1;
+            this.jumpToLine(newLine);
+        }
+
+        this.pageUp = function() {
+            newLine = currentLine - $viewport_nlines;
+            if (newLine >= 1) {
+                this.jumpToLine(newLine);
+            }
+        }
+
+        this.pageDown = function() {
+            newLine = currentLine + vpCM.lineCount();
+            this.jumpToLine(newLine);
+        }
+
+        this.sentenceUp = function() {
+            loadSegment(currentLine, "find_before", {searchString: "<s"});
+        }
+
+        this.sentenceDown = function() {
+            loadSegment(currentLine, "find_after", {searchString: "<s"});
+        }
+
+        this.paragraphUp = function() {
+            loadSegment(currentLine, "find_before", {searchString: "<p"});
+        }
+
+        this.paragraphDown = function() {
+            loadSegment(currentLine, "find_after", {searchString: "<p"});
+        }
+
+        /* -- construction -- */
+
+        //contentElement.rows = numLines;
+        loadSegment(currentLine);
+    };
+
+    var viewport;
+    window.onload = function() {
+        viewport = new Viewport($viewport_line, $viewport_nlines, 
+            document.getElementById("segment_view"), 
+            document.getElementById("line_num")
+            ); 
+    }
+
+    function scrollUp() {
+        viewport.scrollUp();
+    }
+    function scrollDown() {
+        viewport.scrollDown();
+    }
+    function jump() {
+        viewport.jumpToLine(parseInt(document.getElementById("line_num").value));
+    }
+
+    function pageUp() {
+        viewport.pageUp();
+    }
+    function pageDown() {
+        viewport.pageDown();
+    }
+
+    function sentenceUp() {
+        viewport.sentenceUp();
+    }
+    function sentenceDown() {
+        viewport.sentenceDown();
+    }
+
+    function paragraphUp() {
+        viewport.paragraphUp();
+    }
+    function paragraphDown() {
+        viewport.paragraphDown();
+    }
+
+    </script>
+</head>
+<body>
+    <div id="tagcheckbar" style="display:inline;color:#FF0000;background-color:#FFE3AE"></div>
+
+    <div id="horizontal_view">
+        <ol id="hvlist" class="serialization">
+            <!--
+            <li data-id='0'>wordA</li>
+            <li data-id='1'>wordB</li>
+            <li data-id='2'>wordC</li>
+            <li data-id='3'>wordD</li>
+            -->
+        </ol>
+        <!--<div id="serialize_output2" style="background-color: lime"></div>-->
+        &nbsp;
+    </div>
+    <!--<div id="viewport"></div>-->
+    <div id="scrollbar" style="clear: both">
+        <input id="line_num" type="text" onchange="jump()" />
+        <input type="button" value="✓" onclick="jump()" />
+        &nbsp;&nbsp;
+        <input type="button" value="▲ ln" onclick="scrollUp()" />
+        <input type="button" value="▼ ln" onclick="scrollDown()" />
+        &nbsp;&nbsp;
+        <input type="button" value="▲ pg" onclick="pageUp()" />
+        <input type="button" value="▼ pg" onclick="pageDown()" />
+        &nbsp;&nbsp;
+        <input type="button" value="▲ &lt;s&gt;" onclick="sentenceUp()" />
+        <input type="button" value="▼ &lt;s&gt;" onclick="sentenceDown()" />
+        &nbsp;&nbsp;
+        <input type="button" value="▲ &lt;p&gt;" onclick="paragraphUp()" />
+        <input type="button" value="▼ &lt;p&gt;" onclick="paragraphDown()" />
+
+        <span style="display:block; float:right">
+            &nbsp;&nbsp;
+            <span id="commitbar"></span>
+        </span>
+        <span style="clear: both"></span>
+    </div>
+
+
+    <span id="internal_info">
+        <iframe 
+            style="background-color: #E5E5E5; position: absolute; top: 600px; width: 400px; height: 400px; display: none" 
+            id="python_error"></iframe>
+
+        <span style="position: absolute; top: 570px; left: 420px; display: block">changelog_from_head</span>
+        <textarea 
+            style="background-color: #ADD8E6; position: absolute; top: 600px; left: 420px; width: 400px; height: 400px; white-space: nowrap;  display:block" 
+            id="changelog_from_head"></textarea>
+
+        <span style="position: absolute; top: 570px; left: 840px; display: block">window_changelog</span>
+        <textarea 
+            style="background-color: #90EE90; position: absolute; top: 600px; left: 840px; width: 400px; height: 400px; white-space: nowrap;  display:block" 
+            id="window_changelog"></textarea>
+
+        <span style="position: absolute; top: 570px; left: 1260px; display: block">total_changelog</span>
+        <textarea 
+            style="background-color: #FEFF94; position: absolute; top: 600px; left: 1260px; width: 400px; height: 400px; white-space: nowrap;  display:block" 
+            id="total_changelog"></textarea>
+
+        <div style="position: absolute; top: 1000px;">
+            <span id="window_id">$window_id</span><br>
+            $orig_window_status
+            <div id="ajax_status" style="background-color:#E5E5E5"></div>
+        </div>
+    </span>
+    <script>document.getElementById('internal_info').style.display = "none";</script>
+    <input style="position: absolute; right: 10px; bottom: 10px" type="button" value="*" onclick="$('#internal_info').toggle()" />
+
+    <span id="loading" style="display: none; z-index: 500; height: 54px; width: 55px; background-image: url('view/loading.gif')"></span>
+</body>
+</html>
+

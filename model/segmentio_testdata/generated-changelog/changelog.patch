@@ -1,0 +1,11 @@
+only in patch2:
+unchanged:
+--- file.txt	2016-05-08 18:23:50.021985471 +0200
++++ file-edited.txt	2016-05-08 18:23:50.025985471 +0200
+@@ -3,5 +3,5 @@
+ fifth
+ sixth
+ eighth
+-ninth
++ninEEEth
+ tenth

@@ -1,0 +1,4 @@
+.CodeMirror {
+    height: auto; /* resize the editor to fit its content */
+    border: solid 1px green;
+}

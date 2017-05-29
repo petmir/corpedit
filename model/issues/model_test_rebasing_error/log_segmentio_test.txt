@@ -1,0 +1,2459 @@
+DEBUG:root:
+  File "segmentio_test.py", line 302, in test_read_lines
+    lines = line_read_io.read_lines(31, 8)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:31,n:8 of IO <_io.TextIOWrapper name='segmentio_testdata/handmade-changelog/reference-src-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 302, in test_read_lines
+    lines = line_read_io.read_lines(31, 8)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/handmade-changelog/reference-src-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 956, in test_read_src_lines
+    data = self._sio._read_src_lines(src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (30, 37) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1680>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 956, in test_read_src_lines
+    data = self._sio._read_src_lines(src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:30,n:7 of IO <_io.TextIOWrapper name='segmentio_testdata/handmade-changelog/reference-src-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 956, in test_read_src_lines
+    data = self._sio._read_src_lines(src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/handmade-changelog/reference-src-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 651, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (1, 6), src (1, 6)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1440>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 651, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (1, 6) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1440>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 651, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:1,n:5 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 651, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 651, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (1, 6), src (1, 6)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1440>
+ -> block_data: 
+3rd
+fourth
+fifth
+
+ -> segment_data: 
+1st
+2nd
+3rd
+fourth
+fifth
+
+ -> segment_orig_data: 
+first
+second
+third
+fourth
+fifth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 677, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (1, 3), src (1, 3)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04ecd1758>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 677, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (1, 3) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04ecd1758>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 677, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:1,n:2 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1440>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 677, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (1, 4), src (1, 4)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1440>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 677, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (1, 4) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1440>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 677, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:1,n:3 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 677, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 677, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (1, 4), src (1, 4)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1440>
+ -> block_data: 
+1st
+2nd
+
+ -> segment_data: 
+1st
+2nd
+3rd
+
+ -> segment_orig_data: 
+first
+second
+third
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 677, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (1, 3), src (1, 3)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04ecd1758>
+ -> block_data: 
+1st
+2nd
+
+ -> segment_data: 
+1st
+2nd
+
+ -> segment_orig_data: 
+1st
+2nd
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 682, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (4, 10), src (6, 9)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04ecd1758>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 682, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (6, 9) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04ecd1758>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 682, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:6,n:3 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1440>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 682, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (6, 9), src (6, 9)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1440>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 682, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (6, 9) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1440>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 682, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:6,n:3 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 682, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 682, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (6, 9), src (6, 9)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1440>
+ -> block_data: 
+sixth
+seventh
+eighth
+
+ -> segment_data: 
+sixth
+seventh
+eighth
+
+ -> segment_orig_data: 
+sixth
+seventh
+eighth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 682, in test_basing_a_SegmentIO_on_another_SegmentIO
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (4, 10), src (6, 9)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04ecd1758>
+ -> block_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_orig_data: 
+sixth
+seventh
+eighth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 554, in test_editing_data_from_cN
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (4, 10), src (6, 9)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd15f0>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 554, in test_editing_data_from_cN
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (6, 9) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd15f0>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 554, in test_editing_data_from_cN
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:6,n:3 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 554, in test_editing_data_from_cN
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 554, in test_editing_data_from_cN
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (4, 10), src (6, 9)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd15f0>
+ -> block_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_orig_data: 
+sixth
+seventh
+eighth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 595, in test_editing_data_from_cN
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (4, 10), src (6, 12)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd15f0>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 595, in test_editing_data_from_cN
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (6, 12) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd15f0>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 595, in test_editing_data_from_cN
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:6,n:6 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 595, in test_editing_data_from_cN
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 595, in test_editing_data_from_cN
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (4, 10), src (6, 12)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd15f0>
+ -> block_data: 
+ONLY THIS LINE INSTEAD OF "sixth" AND THOSE THREE LINES
+seventh
+eighth
+9th
+tenth
+eleventh
+
+ -> segment_data: 
+ONLY THIS LINE INSTEAD OF "sixth" AND THOSE THREE LINES
+seventh
+eighth
+9th
+tenth
+eleventh
+
+ -> segment_orig_data: 
+sixth
+seventh
+eighth
+ninth
+tenth
+eleventh
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 396, in test_loading_data_from_cN
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (1, 6), src (1, 6)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 396, in test_loading_data_from_cN
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (1, 6) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 396, in test_loading_data_from_cN
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:1,n:5 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 396, in test_loading_data_from_cN
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 396, in test_loading_data_from_cN
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (1, 6), src (1, 6)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>
+ -> block_data: 
+3rd
+fourth
+fifth
+
+ -> segment_data: 
+1st
+2nd
+3rd
+fourth
+fifth
+
+ -> segment_orig_data: 
+first
+second
+third
+fourth
+fifth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 402, in test_loading_data_from_cN
+    no_hunks_segment = sio1.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (4, 10), src (4, 10)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 402, in test_loading_data_from_cN
+    no_hunks_segment = sio1.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (4, 10) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 402, in test_loading_data_from_cN
+    no_hunks_segment = sio1.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:4,n:6 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 402, in test_loading_data_from_cN
+    no_hunks_segment = sio1.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 402, in test_loading_data_from_cN
+    no_hunks_segment = sio1.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (4, 10), src (4, 10)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>
+ -> block_data: 
+fourth
+fifth
+sixth
+seventh
+eighth
+ninth
+
+ -> segment_data: 
+fourth
+fifth
+sixth
+seventh
+eighth
+ninth
+
+ -> segment_orig_data: 
+fourth
+fifth
+sixth
+seventh
+eighth
+ninth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 415, in test_loading_data_from_cN
+    whole_file_segment = sio1.get_segment(block_begin_line=1, block_num_lines=20)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (1, 21), src (1, 21)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 415, in test_loading_data_from_cN
+    whole_file_segment = sio1.get_segment(block_begin_line=1, block_num_lines=20)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (1, 21) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 415, in test_loading_data_from_cN
+    whole_file_segment = sio1.get_segment(block_begin_line=1, block_num_lines=20)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:1,n:20 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 415, in test_loading_data_from_cN
+    whole_file_segment = sio1.get_segment(block_begin_line=1, block_num_lines=20)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 415, in test_loading_data_from_cN
+    whole_file_segment = sio1.get_segment(block_begin_line=1, block_num_lines=20)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (1, 21), src (1, 21)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>
+ -> block_data: 
+1st
+2nd
+3rd
+fourth
+fifth
+sixth
+seventh
+eighth
+ninth
+tenth
+eleventh
+twelfth
+thirteenth
+fourteenth
+fifteenth
+sixteenth
+seventeenth
+eighteenth
+nineteenth
+twentieth
+
+ -> segment_data: 
+1st
+2nd
+3rd
+fourth
+fifth
+sixth
+seventh
+eighth
+ninth
+tenth
+eleventh
+twelfth
+thirteenth
+fourteenth
+fifteenth
+sixteenth
+seventeenth
+eighteenth
+nineteenth
+twentieth
+
+ -> segment_orig_data: 
+first
+second
+third
+fourth
+fifth
+sixth
+seventh
+eighth
+ninth
+tenth
+eleventh
+twelfth
+thirteenth
+fourteenth
+fifteenth
+sixteenth
+seventeenth
+eighteenth
+nineteenth
+twentieth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 419, in test_loading_data_from_cN
+    empty_segment = sio1.get_segment(block_begin_line=5, block_num_lines=0)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (5, 5), src (5, 5)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 419, in test_loading_data_from_cN
+    empty_segment = sio1.get_segment(block_begin_line=5, block_num_lines=0)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (5, 5) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 419, in test_loading_data_from_cN
+    empty_segment = sio1.get_segment(block_begin_line=5, block_num_lines=0)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:5,n:0 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 419, in test_loading_data_from_cN
+    empty_segment = sio1.get_segment(block_begin_line=5, block_num_lines=0)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 419, in test_loading_data_from_cN
+    empty_segment = sio1.get_segment(block_begin_line=5, block_num_lines=0)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (5, 5), src (5, 5)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>
+ -> block_data: 
+
+ -> segment_data: 
+
+ -> segment_orig_data: 
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 423, in test_loading_data_from_cN
+    empty_segment = sio1.get_segment(block_begin_line=5, block_num_lines=1)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (5, 6), src (5, 6)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 423, in test_loading_data_from_cN
+    empty_segment = sio1.get_segment(block_begin_line=5, block_num_lines=1)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (5, 6) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 423, in test_loading_data_from_cN
+    empty_segment = sio1.get_segment(block_begin_line=5, block_num_lines=1)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:5,n:1 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 423, in test_loading_data_from_cN
+    empty_segment = sio1.get_segment(block_begin_line=5, block_num_lines=1)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 423, in test_loading_data_from_cN
+    empty_segment = sio1.get_segment(block_begin_line=5, block_num_lines=1)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (5, 6), src (5, 6)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>
+ -> block_data: 
+fifth
+
+ -> segment_data: 
+fifth
+
+ -> segment_orig_data: 
+fifth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 442, in test_loading_data_from_cN
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (1, 3), src (1, 3)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1098>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 442, in test_loading_data_from_cN
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (1, 3) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1098>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 442, in test_loading_data_from_cN
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:1,n:2 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 442, in test_loading_data_from_cN
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 442, in test_loading_data_from_cN
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (1, 3), src (1, 3)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1098>
+ -> block_data: 
+1st
+2nd
+
+ -> segment_data: 
+1st
+2nd
+
+ -> segment_orig_data: 
+1st
+2nd
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 452, in test_loading_data_from_cN
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (4, 10), src (6, 9)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1098>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 452, in test_loading_data_from_cN
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (6, 9) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1098>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 452, in test_loading_data_from_cN
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:6,n:3 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 452, in test_loading_data_from_cN
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 452, in test_loading_data_from_cN
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (4, 10), src (6, 9)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1098>
+ -> block_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_orig_data: 
+sixth
+seventh
+eighth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 470, in test_loading_data_from_cN
+    sio12_segment = sio12.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (4, 10), src (6, 9)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 470, in test_loading_data_from_cN
+    sio12_segment = sio12.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (6, 9) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 470, in test_loading_data_from_cN
+    sio12_segment = sio12.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:6,n:3 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 470, in test_loading_data_from_cN
+    sio12_segment = sio12.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 470, in test_loading_data_from_cN
+    sio12_segment = sio12.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (4, 10), src (6, 9)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>
+ -> block_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_orig_data: 
+sixth
+seventh
+eighth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 493, in test_loading_data_from_cN
+    sio1234_segment = sio1234.get_segment(block_begin_line=3, block_num_lines=8)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (3, 14), src (6, 10)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 493, in test_loading_data_from_cN
+    sio1234_segment = sio1234.get_segment(block_begin_line=3, block_num_lines=8)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (6, 10) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 493, in test_loading_data_from_cN
+    sio1234_segment = sio1234.get_segment(block_begin_line=3, block_num_lines=8)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:6,n:4 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 493, in test_loading_data_from_cN
+    sio1234_segment = sio1234.get_segment(block_begin_line=3, block_num_lines=8)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 493, in test_loading_data_from_cN
+    sio1234_segment = sio1234.get_segment(block_begin_line=3, block_num_lines=8)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (3, 14), src (6, 10)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1998>
+ -> block_data: 
+sixth
+LN
+KEKščř
+seventh
+[éíǧhth]
+before 9th
+[ňiňÉÉÉth]
+<in
+
+ -> segment_data: 
+sixth
+LN
+KEKščř
+seventh
+[éíǧhth]
+before 9th
+[ňiňÉÉÉth]
+<in
+the
+middle>
+ABC
+
+ -> segment_orig_data: 
+sixth
+seventh
+eighth
+ninth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 526, in test_loading_data_from_cN
+    sio_f4_f2_segment = sio_f4_f2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (4, 11), src (3, 14)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1560>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 526, in test_loading_data_from_cN
+    sio_f4_f2_segment = sio_f4_f2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (3, 14) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1560>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 526, in test_loading_data_from_cN
+    sio_f4_f2_segment = sio_f4_f2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:3,n:11 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit4.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 526, in test_loading_data_from_cN
+    sio_f4_f2_segment = sio_f4_f2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit4.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 526, in test_loading_data_from_cN
+    sio_f4_f2_segment = sio_f4_f2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (4, 11), src (3, 14)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1560>
+ -> block_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+9th
+
+ -> segment_orig_data: 
+sixth
+LN
+KEKščř
+seventh
+[éíǧhth]
+before 9th
+[ňiňÉÉÉth]
+<in
+the
+middle>
+ABC
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 368, in test_loading_data_with_handmade_changelog
+    segment = sio.get_segment(block_begin_line=86, block_num_lines=6)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (85, 97), src (33, 48)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 368, in test_loading_data_with_handmade_changelog
+    segment = sio.get_segment(block_begin_line=86, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (33, 48) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 368, in test_loading_data_with_handmade_changelog
+    segment = sio.get_segment(block_begin_line=86, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:33,n:15 of IO <_io.TextIOWrapper name='segmentio_testdata/handmade-changelog/reference-src-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 368, in test_loading_data_with_handmade_changelog
+    segment = sio.get_segment(block_begin_line=86, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/handmade-changelog/reference-src-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 368, in test_loading_data_with_handmade_changelog
+    segment = sio.get_segment(block_begin_line=86, block_num_lines=6)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (85, 97), src (33, 48)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>
+ -> block_data: 
+naopak zkrácen.
+šel
+dědeček
+na
+kopeček
+...nevím, jak dál!
+
+ -> segment_data: 
+Tenhle byl
+naopak zkrácen.
+šel
+dědeček
+na
+kopeček
+...nevím, jak dál!
+(za básní)
+eighth
+ninth
+tenth
+eleventh
+
+ -> segment_orig_data: 
+Tenhle
+naopak
+bude
+zkrácen.
+šel
+dědeček
+na
+kopeček
+(za básní)
+sixth
+seventh
+eighth
+ninth
+tenth
+eleventh
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 627, in test_read_lines
+    self.assertEqual(sio2.read_lines(4, 6), u'''sixth
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:4,n:6 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccccf8>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 627, in test_read_lines
+    self.assertEqual(sio2.read_lines(4, 6), u'''sixth
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (4, 10), src (6, 9)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccccf8>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 627, in test_read_lines
+    self.assertEqual(sio2.read_lines(4, 6), u'''sixth
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (6, 9) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccccf8>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 627, in test_read_lines
+    self.assertEqual(sio2.read_lines(4, 6), u'''sixth
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:6,n:3 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 627, in test_read_lines
+    self.assertEqual(sio2.read_lines(4, 6), u'''sixth
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 627, in test_read_lines
+    self.assertEqual(sio2.read_lines(4, 6), u'''sixth
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (4, 10), src (6, 9)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccccf8>
+ -> block_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_orig_data: 
+sixth
+seventh
+eighth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 709, in test_rebasing_from_f1_to_f0
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (3, 6), src (3, 6)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 709, in test_rebasing_from_f1_to_f0
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (3, 6) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 709, in test_rebasing_from_f1_to_f0
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:3,n:3 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 709, in test_rebasing_from_f1_to_f0
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 709, in test_rebasing_from_f1_to_f0
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (3, 6), src (3, 6)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>
+ -> block_data: 
+3rd
+fourth
+fifth
+
+ -> segment_data: 
+3rd
+fourth
+fifth
+
+ -> segment_orig_data: 
+3rd
+fourth
+fifth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 728, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (1, 3), src (1, 3)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccccf8>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 728, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (1, 3) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccccf8>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 728, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:1,n:2 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 728, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (1, 3), src (1, 3)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 728, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (1, 3) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 728, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:1,n:2 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 728, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 728, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (1, 3), src (1, 3)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>
+ -> block_data: 
+1st
+2nd
+
+ -> segment_data: 
+1st
+2nd
+
+ -> segment_orig_data: 
+1st
+2nd
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 728, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (1, 3), src (1, 3)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccccf8>
+ -> block_data: 
+1st
+2nd
+
+ -> segment_data: 
+1st
+2nd
+
+ -> segment_orig_data: 
+1st
+2nd
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 733, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (4, 10), src (6, 9)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccccf8>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 733, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (6, 9) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccccf8>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 733, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:6,n:3 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 733, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (6, 9), src (6, 9)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 733, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (6, 9) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 733, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:6,n:3 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 733, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 733, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (6, 9), src (6, 9)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>
+ -> block_data: 
+sixth
+seventh
+eighth
+
+ -> segment_data: 
+sixth
+seventh
+eighth
+
+ -> segment_orig_data: 
+sixth
+seventh
+eighth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 733, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (4, 10), src (6, 9)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccccf8>
+ -> block_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_orig_data: 
+sixth
+seventh
+eighth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 762, in test_rebasing_from_f1_to_f0
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (1, 6), src (1, 6)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 762, in test_rebasing_from_f1_to_f0
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (1, 6) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 762, in test_rebasing_from_f1_to_f0
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:1,n:5 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 762, in test_rebasing_from_f1_to_f0
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 762, in test_rebasing_from_f1_to_f0
+    segment = sio1.get_segment(block_begin_line=3, block_num_lines=3)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (1, 6), src (1, 6)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>
+ -> block_data: 
+3rd
+fourth
+fifth
+
+ -> segment_data: 
+1st
+2nd
+3rd
+fourth
+fifth
+
+ -> segment_orig_data: 
+first
+second
+third
+fourth
+fifth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 779, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (1, 3), src (1, 3)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccc908>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 779, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (1, 3) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccc908>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 779, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:1,n:2 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 779, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (1, 4), src (1, 4)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 779, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (1, 4) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 779, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:1,n:3 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 779, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 779, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (1, 4), src (1, 4)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>
+ -> block_data: 
+1st
+2nd
+
+ -> segment_data: 
+1st
+2nd
+3rd
+
+ -> segment_orig_data: 
+first
+second
+third
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 779, in test_rebasing_from_f1_to_f0
+    segment1 = sio2.get_segment(block_begin_line=1, block_num_lines=2)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (1, 3), src (1, 3)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccc908>
+ -> block_data: 
+1st
+2nd
+
+ -> segment_data: 
+1st
+2nd
+
+ -> segment_orig_data: 
+1st
+2nd
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 784, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (4, 10), src (6, 9)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccc908>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 784, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (6, 9) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccc908>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 784, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:6,n:3 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 784, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (6, 9), src (6, 9)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 784, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (6, 9) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 784, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:6,n:3 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 784, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 784, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (6, 9), src (6, 9)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>
+ -> block_data: 
+sixth
+seventh
+eighth
+
+ -> segment_data: 
+sixth
+seventh
+eighth
+
+ -> segment_orig_data: 
+sixth
+seventh
+eighth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 784, in test_rebasing_from_f1_to_f0
+    segment2 = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (4, 10), src (6, 9)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccc908>
+ -> block_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_orig_data: 
+sixth
+seventh
+eighth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 811, in test_rebasing_from_f2_to_f1
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (4, 10), src (4, 10)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 811, in test_rebasing_from_f2_to_f1
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (4, 10) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 811, in test_rebasing_from_f2_to_f1
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:4,n:6 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit2.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 811, in test_rebasing_from_f2_to_f1
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit2.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 811, in test_rebasing_from_f2_to_f1
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (4, 10), src (4, 10)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>
+ -> block_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_orig_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 833, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (8, 11), src (10, 12)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccc7a0>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 833, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (10, 12) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccc7a0>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 833, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:10,n:2 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 833, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (10, 12), src (10, 12)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 833, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (10, 12) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 833, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:10,n:2 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit2.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 833, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit2.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 833, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (10, 12), src (10, 12)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04eccca70>
+ -> block_data: 
+9th
+tenth
+
+ -> segment_data: 
+9th
+tenth
+
+ -> segment_orig_data: 
+9th
+tenth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 833, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (8, 11), src (10, 12)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccc7a0>
+ -> block_data: 
+ninEEEth
+ABC
+tenth
+
+ -> segment_data: 
+ninEEEth
+ABC
+tenth
+
+ -> segment_orig_data: 
+9th
+tenth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 859, in test_rebasing_from_f2_to_f1
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (4, 10), src (6, 9)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 859, in test_rebasing_from_f2_to_f1
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (6, 9) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 859, in test_rebasing_from_f2_to_f1
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:6,n:3 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 859, in test_rebasing_from_f2_to_f1
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 859, in test_rebasing_from_f2_to_f1
+    seg = sio2.get_segment(block_begin_line=4, block_num_lines=6)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (4, 10), src (6, 9)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>
+ -> block_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_data: 
+sixth
+ADDING
+3
+LINES
+seventh
+eighth
+
+ -> segment_orig_data: 
+sixth
+seventh
+eighth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 879, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (8, 11), src (10, 12)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccccf8>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 879, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (10, 12) of SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccccf8>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 879, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1883, in read_lines
+    dbg("reading dest lines l:", line, ",n:", num_lines ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading dest lines l:10,n:2 of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 879, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1752, in get_segment
+    " from SegmentIO on LRIO ", self._line_read_io)
+#[getting segment <dest (10, 12), src (9, 11)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 879, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1875, in _read_src_lines
+    dbg("reading src line range ", src_line_range ," of SegmentIO on LRIO ", self._line_read_io)
+#[reading src line range (9, 11) of SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 879, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1703, in read_lines
+    dbg("reading physical lines l:", line, ",n:", num_lines, " of IO ", self._file_io)
+#[reading physical lines l:9,n:2 of IO <_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 879, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1704, in read_lines
+    dbg(self._file_io)
+#[<_io.TextIOWrapper name='segmentio_testdata/cN/reference-file-after-edit1.txt' encoding='utf-8'>]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 879, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1753, in get_segment
+    segment_orig_data = self._read_src_lines(segment_src_line_range)
+  File "segmentio.py", line 1878, in _read_src_lines
+    return self._line_read_io.read_lines(begin(src_line_range), num_lines)
+  File "segmentio.py", line 1885, in read_lines
+    seg = self.get_segment(block_begin_line=line, block_num_lines=num_lines)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (10, 12), src (9, 11)> from SegmentIO on LRIO <segmentio.FileLineReadIO instance at 0x7fb04ecd1368>
+ -> block_data: 
+9th
+tenth
+
+ -> segment_data: 
+9th
+tenth
+
+ -> segment_orig_data: 
+ninth
+tenth
+]#
+
+DEBUG:root:
+  File "segmentio_test.py", line 879, in test_rebasing_from_f2_to_f1
+    seg = sio3.get_segment(block_begin_line=8, block_num_lines=3)
+  File "segmentio.py", line 1768, in get_segment
+    "\n -> segment_orig_data: \n", segment_orig_data)
+#[got segment <dest (8, 11), src (10, 12)> from SegmentIO on LRIO <segmentio.SegmentIO instance at 0x7fb04eccccf8>
+ -> block_data: 
+ninEEEth
+ABC
+tenth
+
+ -> segment_data: 
+ninEEEth
+ABC
+tenth
+
+ -> segment_orig_data: 
+9th
+tenth
+]#
+
